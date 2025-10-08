@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Candidate for National Deputy Secretary General | APC Sierra Leone
+        </title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./src/index.css">
+        <style>
+            body {
+                font-family: "Poppins", sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50 text-gray-900 antialiased">
+        <div id="root"></div>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <!-- Load components in order (they must be loaded before App) -->
+        <script type="text/babel" src="./src/components/Navbar.tsx"></script>
+        <script type="text/babel" src="./src/components/Header.tsx"></script>
+        <script type="text/babel" src="./src/components/Hero.tsx"></script>
+        <script type="text/babel" src="./src/components/About.tsx"></script>
+        <script type="text/babel" src="./src/components/VisionMission.tsx"></script>
+        <script type="text/babel" src="./src/components/CoreValues.tsx"></script>
+        <script type="text/babel" src="./src/components/Attributes.tsx"></script>
+        <script type="text/babel" src="./src/components/Donation.tsx"></script>
+        <script type="text/babel" src="./src/components/ContactForm.tsx"></script>
+        <script type="text/babel" src="./src/components/SocialMedia.tsx"></script>
+        <script type="text/babel" src="./src/components/Footer.tsx"></script>
+
+        <!-- Load App component -->
+        <script type="text/babel" src="./App.tsx"></script>
+
+        <!-- Bootstrap the application -->
+        <script type="text/babel">
+            const container = document.getElementById('root');
+            if (container) {
+                const root = ReactDOM.createRoot(container);
+                root.render(
+                    <React.StrictMode>
+                        <App />
+                    </React.StrictMode>
+                );
+            } else {
+                console.error('Failed to find the root element.');
+            }
+        </script>
+    </body>
+</html>
