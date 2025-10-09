@@ -13,7 +13,6 @@ window.About = function About() {
           About Me
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Left Column: Biography */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-red-600 border-b-2 border-red-200 pb-2">
               My Story
@@ -35,7 +34,6 @@ window.About = function About() {
             </p>
           </div>
 
-          {/* Right Column: Education & Achievements */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-red-600 border-b-2 border-red-200 pb-2 mb-4">
