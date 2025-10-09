@@ -7,8 +7,8 @@
 window.Header = function Header() {
 
   return (
-    <header className="bg-black shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-4 flex justify-center">
+    <header className="bg-gray-800 shadow-md sticky top-0 z-50">
+      <div className="container mx-auto px-6 py-1 flex justify-center">
         {/* Slogan */}
         <p className="text-md text-red-600 font-bold">ALM na we move!</p>
       </div>

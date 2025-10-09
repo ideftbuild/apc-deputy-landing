@@ -1,6 +1,6 @@
 // src/App.tsx
 // Access components from window object
-const { Header, Hero, About, VisionMission, CoreValues, Attributes, Donation, ContactForm, SocialMedia, Footer, Navbar } = window;
+// const { Header, Hero, About, VisionMission, CoreValues, Attributes, Donation, ContactForm, SocialMedia, Footer, Navbar } = window;
 /**
  * The main application component.
  * This component orchestrates the layout of the entire landing page by importing and
@@ -22,7 +22,8 @@ window.App = function App() {
   return (
     <div className="">
       {/* Header Section */}
-      {/* <Header /> */}
+      <Header />
+
       <Navbar />
 
       {/* Main Content Sections */}
