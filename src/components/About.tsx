@@ -47,7 +47,12 @@ window.About = function About() {
                 respect for due process.
               </p>
             </div>
-            <div>
+          </div>
+
+          <div className="space-y-8 md:col-span-2">
+            <LeadershipAchievements />
+          </div>
+{/*             <div>
               <h3 className="text-2xl font-semibold text-red-600 border-b-2 border-red-200 pb-2 mb-4">
                 Leadership & Key Achievements
               </h3>
@@ -73,8 +78,7 @@ window.About = function About() {
                   and communication.
                 </li>
               </ul>
-            </div>
-          </div>
+            </div> */}
         </div>
       </div>
     </section>
