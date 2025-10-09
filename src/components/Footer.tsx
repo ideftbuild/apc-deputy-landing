@@ -10,28 +10,25 @@ window.Footer = function Footer () {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-8 text-center">
-        {/* Candidate Name */}
         <h3 className="text-2xl font-bold text-red-500">
-          Ibrahim Komkanda Bangura
-        </h3>
+           {APP_CONSTANTS.candidateName.full}
+          </h3>
 
-        {/* Election Date */}
         <p className="text-gray-400 mt-2">
           Election Date: <span className="font-semibold">March 2026</span>
         </p>
 
-        {/* Tagline */}
         <p className="text-gray-500 mt-4 text-sm">
-          A New Era of Leadership for the APC.
+          Together, We Build a Stronger APC.
         </p>
 
         {/* Copyright */}
         <div className="mt-6 border-t border-gray-700 pt-6">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} Akanimo Precious Clement for NDGS. All Rights Reserved.
+            &copy; {new Date().getFullYear()} All Rights Reserved.
           </p>
            <p className="text-gray-600 text-xs mt-1">
-            Paid for by the Committee to Elect Akanimo Precious Clement.
+            Paid for by the Committee to Elect {APP_CONSTANTS.candidateName.full}.
           </p>
         </div>
       </div>

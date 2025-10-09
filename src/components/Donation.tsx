@@ -16,7 +16,7 @@ window.Donation = function Donation () {
           Your generous contribution fuels our campaign, powers our grassroots outreach, and brings us one step closer to victory. Together, we can build a stronger APC for a better Sierra Leone.
         </p>
         <a
-          href="#donate" // Placeholder link
+          href={APP_CONSTANTS.donateLink}
           className="bg-white text-red-600 font-bold text-xl py-4 px-12 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 shadow-2xl inline-block"
           aria-label="Donate to the campaign"
         >
