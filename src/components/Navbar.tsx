@@ -1,4 +1,11 @@
 
+// src/components/Navbar.tsx
+
+/**
+ * Navbar Component
+ * Displays the top navigation bar with the candidate name, primary links,
+ * and a responsive mobile menu toggle.
+ */
 
 window.Navbar = function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);

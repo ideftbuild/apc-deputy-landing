@@ -1,3 +1,10 @@
+// src/constants.ts
+
+/**
+ * Global App Constants
+ * Centralized configuration values (candidate name, social links, contact,
+ * donate link) exposed on the window for use across CDN-loaded components.
+ */
 window.APP_CONSTANTS = {
   appName: "APC Deputy Landing",
   candidateName: {
