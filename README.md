@@ -136,18 +136,6 @@ window.APP_CONSTANTS = {
    - Add script tags to `index.html` in the correct order
    - Import components in `src/App.tsx`
 
-## 🌐 Deployment
-
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically (includes `vercel.json` configuration)
-
-### Other Platforms
-- **Netlify**: Drag and drop the project folder
-- **GitHub Pages**: Enable Pages in repository settings
-- **AWS S3**: Upload files to S3 bucket with static website hosting
-
 ## 🎨 Styling & Design
 
 - **Framework**: Tailwind CSS for utility-first styling
@@ -157,31 +145,6 @@ window.APP_CONSTANTS = {
   - Secondary: Gray tones
   - Background: Light gray (#F9FAFB)
 - **Responsive Breakpoints**: Mobile-first with md: and lg: prefixes
-
-## 📱 Browser Support
-
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-- Follow Conventional Commits for commit messages
-- Maintain responsive design principles
-- Test across different screen sizes
-- Ensure accessibility standards
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
