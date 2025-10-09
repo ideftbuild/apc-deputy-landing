@@ -13,7 +13,6 @@ window.VisionMission = function VisionMission() {
           Our Vision & Mission
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Vision Statement */}
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-red-600 mb-4">
               My Vision
@@ -23,7 +22,6 @@ window.VisionMission = function VisionMission() {
             </p>
           </div>
 
-          {/* Mission Statement */}
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-red-600 mb-4">
               My Mission

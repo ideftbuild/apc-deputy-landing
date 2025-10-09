@@ -10,7 +10,6 @@ window.Hero = function Hero() {
     <section id="hero" className="text-white h-screen flex justify-center">
       <div className="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-center">
 
-        {/* Hero Text Content */}
         <div className="md:w-2/3 flex flex-col items-center justify-center md:text-left w-[86%] md:w-[80%]">
           <h2 className="text-5xl md:text-8xl font-extrabold leading-tight mb-8 text-center">
             The Change We’ve Been Waiting For

@@ -32,7 +32,6 @@ window.ContactForm = function ContactForm() {
           encType="text/plain"
           className="bg-gray-50 p-8 rounded-lg shadow-lg space-y-6"
         >
-          {/* Name Field */}
           <div>
             <label
               htmlFor="name"
@@ -51,7 +50,6 @@ window.ContactForm = function ContactForm() {
             />
           </div>
 
-          {/* Email Field */}
           <div>
             <label
               htmlFor="email"
@@ -70,7 +68,6 @@ window.ContactForm = function ContactForm() {
             />
           </div>
 
-          {/* Message Field */}
           <div>
             <label
               htmlFor="message"
@@ -89,7 +86,6 @@ window.ContactForm = function ContactForm() {
             ></textarea>
           </div>
 
-          {/* Submit Button */}
           <div className="text-center">
             <button
               type="submit"

@@ -5,8 +5,6 @@
  * Displays the candidate's guiding principles in a clean, grid-based layout.
  * Each value is presented with an icon and a brief description to be easily digestible.
  */
-
-// A simple data structure for core values to keep the JSX clean.
 const values = [
   {
     icon: (

@@ -11,7 +11,6 @@ window.Navbar = function Navbar() {
     <nav className="bg-white shadow-md fixed top-8 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Left: Candidate Name */}
           <div className="flex-shrink-0">
             <a href="#home" className="md:text-2xl font-bold text-red-600 hover:text-red-700 transition-colors">
               {APP_CONSTANTS.candidateName.short}
@@ -79,7 +78,6 @@ window.Navbar = function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 pt-2 pb-4 space-y-2">

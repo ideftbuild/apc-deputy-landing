@@ -22,7 +22,6 @@ window.Footer = function Footer () {
           Together, We Build a Stronger APC.
         </p>
 
-        {/* Copyright */}
         <div className="mt-6 border-t border-gray-700 pt-6">
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} All Rights Reserved.
