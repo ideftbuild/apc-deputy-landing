@@ -45,7 +45,7 @@ window.Navbar = function Navbar() {
               Contact
             </a>
             <a
-              href="#donate"
+              href={APP_CONSTANTS.donateLink}
               className="bg-red-600 text-white px-6 py-2 rounded-md font-medium hover:bg-red-700 transition-colors"
             >
               Donate
@@ -55,7 +55,7 @@ window.Navbar = function Navbar() {
           {/* Mobile: Donate Button + Menu Toggle */}
           <div className="flex md:hidden items-center space-x-4">
             <a
-              href="#donate"
+              href={APP_CONSTANTS.donateLink}
               className="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
             >
               Donate
