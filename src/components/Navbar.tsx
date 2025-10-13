@@ -1,5 +1,7 @@
 
 // src/components/Navbar.tsx
+import React from 'react';
+import { APP_CONSTANTS } from '../constants';
 
 /**
  * Navbar Component
@@ -7,7 +9,7 @@
  * and a responsive mobile menu toggle.
  */
 
-window.Navbar = function Navbar() {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {

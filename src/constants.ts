@@ -3,9 +3,9 @@
 /**
  * Global App Constants
  * Centralized configuration values (candidate name, social links, contact,
- * donate link) exposed on the window for use across CDN-loaded components.
+ * donate link) for use across components.
  */
-window.APP_CONSTANTS = {
+export const APP_CONSTANTS = {
   appName: "APC Deputy Landing",
   candidateName: {
     short: "Ibrahim K. Bangura",

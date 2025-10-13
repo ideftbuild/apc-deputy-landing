@@ -1,4 +1,4 @@
-const { useState, useEffect } = React;
+import React, { useState, useEffect } from 'react';
 
 const ProgressCircle = ({ percentage, color }) => {
   const [progress, setProgress] = useState(0);
@@ -88,7 +88,7 @@ const AchievementCard = ({ icon, title, description, metric, color }) => {
   );
 };
 
-window.LeadershipAchievements = function LeadershipAchievements() {
+export default function LeadershipAchievements() {
   const achievements = [
     {
       icon: (

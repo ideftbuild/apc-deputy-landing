@@ -1,4 +1,6 @@
 // src/components/SocialMedia.tsx
+import React from 'react';
+import { APP_CONSTANTS } from '../constants';
 
 /**
  * Social Media Component
@@ -51,7 +53,7 @@ const socialLinks = [
   },
 ];
 
-window.SocialMedia = function SocialMedia() {
+export default function SocialMedia() {
   return (
     <section id="social-media" className="py-12 bg-gray-100">
       <div className="container mx-auto px-6">

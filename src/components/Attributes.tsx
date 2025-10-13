@@ -1,4 +1,5 @@
 // src/components/Attributes.tsx
+import React from 'react';
 
 /**
  * Attributes Component
@@ -40,7 +41,7 @@ const attributes = [
   },
 ];
 
-window.Attributes = function Attributes() {
+export default function Attributes() {
   return (
     <section id="attributes" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-6">

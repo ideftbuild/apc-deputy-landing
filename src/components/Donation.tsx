@@ -1,11 +1,13 @@
 // src/components/Donation.tsx
+import React from 'react';
+import { APP_CONSTANTS } from '../constants';
 
 /**
  * Donation Component
  * A clear and prominent call-to-action section for campaign contributions.
  * It features a large, visually appealing button to guide supporters.
  */
-window.Donation = function Donation () {
+export default function Donation() {
   return (
     <section id="donate" className="bg-red-700 text-white py-16 md:py-20">
       <div className="container mx-auto px-6 text-center">

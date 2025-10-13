@@ -1,4 +1,5 @@
 // src/components/CoreValues.tsx
+import React from 'react';
 
 /**
  * Core Values Component
@@ -62,7 +63,7 @@ const values = [
   },
 ];
 
-window.CoreValues = function CoreValues() {
+export default function CoreValues() {
   return (
     <section id="core-values" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-6">

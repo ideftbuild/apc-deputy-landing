@@ -1,11 +1,13 @@
 // src/components/About.tsx
+import React from 'react';
+import LeadershipAchievements from './LeadershipAchievements';
 
 /**
  * About Component
  * Provides a detailed overview of the candidate's background, including their biography,
  * education, legal expertise, leadership roles, and key achievements.
  */
-window.About = function About() {
+export default function About() {
   return (
     <section id="about" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-6">

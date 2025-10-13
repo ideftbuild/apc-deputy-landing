@@ -1,11 +1,12 @@
 // src/components/VisionMission.tsx
+import React from 'react';
 
 /**
  * Vision & Mission Component
  * Clearly articulates the candidate's forward-looking vision for the party
  * and the specific, actionable mission they pledge to undertake.
  */
-window.VisionMission = function VisionMission() {
+export default function VisionMission() {
   return (
     <section id="vision-mission" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-6">

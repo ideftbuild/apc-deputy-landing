@@ -1,11 +1,13 @@
 // src/components/Footer.tsx
+import React from 'react';
+import { APP_CONSTANTS } from '../constants';
 
 /**
  * Footer Component
  * Displays final information such as the candidate's name, the election date,
  * and a concluding tagline. It serves as the closing element of the landing page.
  */
-window.Footer = function Footer () {
+export default function Footer() {
 
   return (
     <footer className="bg-gray-800 text-white">

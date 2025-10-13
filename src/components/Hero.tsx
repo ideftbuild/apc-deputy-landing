@@ -1,11 +1,12 @@
 // src/components/Hero.tsx
+import React from 'react';
 
 /**
  * Hero Component
  * Features a prominent candidate image placeholder, a compelling introduction,
  * and a clear call-to-action button to engage visitors immediately.
  */
-window.Hero = function Hero() {
+export default function Hero() {
   return (
     <section id="hero" className="text-white h-screen flex justify-center">
       <div className="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center justify-center">

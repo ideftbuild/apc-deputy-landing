@@ -1,11 +1,12 @@
 // src/components/ContactForm.tsx
+import React from 'react';
 
 /**
  * Contact Form Component
  * A simple, user-friendly form for visitors to send inquiries.
  * It uses a `mailto:` link for submission, avoiding the need for a backend server.
  */
-window.ContactForm = function ContactForm() {
+export default function ContactForm() {
   // The target email address for the mailto link.
   const recipientEmail = "contact@example.com";
   const subject = "Message from the Campaign Website";
