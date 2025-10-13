@@ -1,5 +1,7 @@
 // src/components/Header.tsx
-import React from 'react';
+
+import Navbar from "./Navbar";
+import { APP_CONSTANTS } from '../constants';
 
 /**
  * Header Component
@@ -9,9 +11,12 @@ import React from 'react';
 export default function Header() {
 
   return (
-    <header className="bg-gray-800 shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-1 flex justify-center">
-        <p className="text-md text-red-600 font-bold">ALM na we move!</p>
+    <header className="shadow-sm">
+      <div className="flex justify-between px-4 lg:px-8 sm:px-6 bg-green-700">
+        <a href="#home" className="flex items-center justify-center md:text-2xl font-bold text-red-600 hover:text-red-700 transition-colors">
+          {APP_CONSTANTS.candidateName.short}
+        </a>
+        <Navbar />
       </div>
     </header>
   );
