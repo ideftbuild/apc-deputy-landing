@@ -16,6 +16,7 @@ A modern, responsive political campaign landing page built with vanilla React, T
 This project uses a **vanilla React architecture** with CDN-loaded dependencies, making it deployment-friendly without build tools:
 
 ### Technology Stack
+
 - **React 18** (via CDN)
 - **ReactDOM 18** (via CDN)
 - **Babel Standalone** (for JSX transformation)
@@ -23,7 +24,8 @@ This project uses a **vanilla React architecture** with CDN-loaded dependencies,
 - **Poppins Font** (Google Fonts)
 
 ### Project Structure
-```
+
+```bash
 apc-deputy-landing/
 ├── index.html                 # Main HTML entry point
 ├── vercel.json               # Vercel deployment configuration
@@ -52,6 +54,7 @@ apc-deputy-landing/
 ## 🎯 Components Overview
 
 ### Core Sections
+
 - **Hero**: Compelling introduction with call-to-action
 - **About**: Personal story, background, and achievements
 - **Leadership Achievements**: Interactive metrics and progress indicators
@@ -64,6 +67,7 @@ apc-deputy-landing/
 - **Footer**: Final information and copyright
 
 ### Navigation
+
 - **Header**: Top slogan bar ("ALM na we move!")
 - **Navbar**: Responsive navigation with mobile menu
 - **Smooth Scrolling**: Enhanced user experience
@@ -95,18 +99,21 @@ window.APP_CONSTANTS = {
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - A modern web browser
 - A local web server (for development)
 
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd apc-deputy-landing
    ```
 
 2. **Start a local server**
+
    ```bash
    # Using Python 3
    python -m http.server 8000
@@ -140,7 +147,7 @@ window.APP_CONSTANTS = {
 
 - **Framework**: Tailwind CSS for utility-first styling
 - **Typography**: Poppins font family (400, 600, 700 weights)
-- **Color Scheme**: 
+- **Color Scheme**:
   - Primary: Red (#DC2626)
   - Secondary: Gray tones
   - Background: Light gray (#F9FAFB)
@@ -149,9 +156,10 @@ window.APP_CONSTANTS = {
 ## 📞 Contact
 
 For questions about this project or the campaign:
-- Email: info@example.com
+
+- Email: <info@example.com>
 - Website: [Campaign Website]
 
 ---
 
-**Built with ❤️ for the future of Sierra Leone**
+Built with ❤️ for the future of Sierra Leone
