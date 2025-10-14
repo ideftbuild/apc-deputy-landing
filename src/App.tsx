@@ -3,6 +3,15 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import VisionMission from "./components/VisionMission";
+import Donation from "./components/Donation";
+import "./App.css";
+import { Contact } from "lucide-react";
+import ContactForm from "./components/ContactForm";
+import SocialMedia from "./components/SocialMedia";
+import Footer from "./components/Footer";
+import CoreValues from "./components/CoreValues";
+
 /**
  * The main application component.
  * This component orchestrates the layout of the entire landing page by importing and
@@ -10,7 +19,6 @@ import About from "./components/About";
  */
 
 export default function App() {
-
   return (
     <div className="">
       <Header />
@@ -18,12 +26,21 @@ export default function App() {
       <main>
         <Hero />
 
-        <p className="ext-center font-bold mt-22">ALM we move!</p>
         <div className="relative z-20 bg-[#f5f5f5]">
+          <p className="text-center">ALM we move!</p>
           <About />
+          <CoreValues />
           <VisionMission />
         </div>
+        <Donation />
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 relative z-10">
+          <ContactForm />
+          <SocialMedia />
+        </div>
+
+        <Footer />
       </main>
     </div>
   );
-};
+}
