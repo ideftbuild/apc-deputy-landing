@@ -16,8 +16,13 @@ export default function App() {
       <Header />
 
       <main>
-        <Hero/>
-        <About/>
+        <Hero />
+
+        <p className="ext-center font-bold mt-22">ALM we move!</p>
+        <div className="relative z-20 bg-[#f5f5f5]">
+          <About />
+          <VisionMission />
+        </div>
       </main>
     </div>
   );
