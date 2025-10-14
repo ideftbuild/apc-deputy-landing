@@ -1,7 +1,6 @@
-
 // src/components/Navbar.tsx
-import React from 'react';
-import { APP_CONSTANTS } from '../constants';
+import React from "react";
+import { APP_CONSTANTS } from "../constants";
 /**
  * Navbar Component
  * Displays the top navigation bar with the candidate name, primary links,
@@ -22,25 +21,25 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-8">
           <a
             href="#about"
-            className="text-green-200 hover:border-b hover:border-black font-medium"
+            className="text-gray-700 hover:border-b hover:border-black font-medium"
           >
             About
           </a>
           <a
             href="#vision-mission"
-            className="text-green-200 hover:border-b hover:border-black font-medium transition-colors"
+            className="text-gray-700 hover:border-b hover:border-black font-medium transition-colors"
           >
             Vision & Mission
           </a>
           <a
             href="#contact"
-            className="text-green-200 hover:border-b hover:border-black font-medium transition-colors"
+            className="text-gray-700 hover:border-b hover:border-black font-medium transition-colors"
           >
             Contact
           </a>
           <a
             href={APP_CONSTANTS.donateLink}
-            className="bg-red-600 text-white px-6 py-2 rounded-md font-medium hover:bg-red-700 transition-colors"
+            className="bg-[#fe4a49] text-white px-6 py-2 rounded-md font-medium hover:bg-red-600 transition-colors"
           >
             Donate
           </a>
@@ -50,13 +49,13 @@ export default function Navbar() {
         <div className="flex md:hidden items-center space-x-4">
           <a
             href={APP_CONSTANTS.donateLink}
-            className="bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
+            className="bg-[#fe4a49] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
           >
             Donate
           </a>
           <button
             onClick={toggleMenu}
-            className="text-gray-200 hover:text-red-600 focus:outline-none focus:text-red-600"
+            className="text-gray-800 hover:text-red-600 focus:outline-none focus:text-red-600"
             aria-label="Toggle menu"
           >
             <svg
@@ -79,26 +78,26 @@ export default function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="absolute md:hidden shadow-sm bg-white border-t border-gray-400">
+        <div className="absolute md:hidden shadow-sm bg-[#f5f5f5] border-t border-gray-400 z-100 left-[50%] w-[50%]">
           <div className="px-4 pt-2 pb-4 space-y-2">
             <a
               href="#about"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 hover:bg-gray-100 hover:bg-opacity-10 py-2 rounded-md text-base font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
             >
               About
             </a>
             <a
               href="#vision-mission"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 hover:bg-gray-100 hover:bg-opacity-10 py-2 rounded-md text-base font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
             >
               Vision & Mission
             </a>
             <a
               href="#contact"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 hover:bg-gray-100 hover:bg-pacity-10 py-2 rounded-md text-base font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors"
+              className="block px-3 hover:bg-pacity-10 py-2 rounded-md text-base font-medium text-gray-700"
             >
               Contact
             </a>
@@ -107,4 +106,4 @@ export default function Navbar() {
       )}
     </nav>
   );
-};
+}

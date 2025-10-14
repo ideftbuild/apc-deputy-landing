@@ -1,5 +1,4 @@
 // src/components/ContactForm.tsx
-import React from 'react';
 
 /**
  * Contact Form Component
@@ -18,9 +17,9 @@ export default function ContactForm() {
   const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}`;
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-6 max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
+    <section id="contact" className="py-16 md:py-24">
+      <div className="px-6 max-w-3xl">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">
           Get in Touch
         </h2>
         <p className="text-center text-gray-600 mb-12">
@@ -31,12 +30,12 @@ export default function ContactForm() {
           action={mailtoLink}
           method="post"
           encType="text/plain"
-          className="bg-gray-50 p-8 rounded-lg shadow-lg space-y-6"
+          className="rounded-lg space-y-6"
         >
           <div>
             <label
               htmlFor="name"
-              className="block text-gray-700 font-semibold mb-2"
+              className="block text-gray-800 font-semibold mb-2"
             >
               Full Name
             </label>
@@ -44,7 +43,7 @@ export default function ContactForm() {
               type="text"
               id="name"
               name="name"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full px-4 py-3 focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
               placeholder="Your Name"
               required
               aria-label="Full Name"
@@ -54,7 +53,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="email"
-              className="block text-gray-700 font-semibold mb-2"
+              className="block text-gray-800 font-semibold mb-2"
             >
               Email Address
             </label>
@@ -62,7 +61,7 @@ export default function ContactForm() {
               type="email"
               id="email"
               name="email"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full px-4 py-3 focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
               placeholder="your.email@example.com"
               required
               aria-label="Email Address"
@@ -72,7 +71,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="message"
-              className="block text-gray-700 font-semibold mb-2"
+              className="block text-gray-880 font-semibold mb-2"
             >
               Message
             </label>
@@ -90,7 +89,7 @@ export default function ContactForm() {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-red-600 text-white font-bold py-3 px-10 rounded-full hover:bg-red-700 transition-colors duration-300 shadow-md text-lg"
+              className="bg-[#fe4a49] text-white font-bold py-3 px-10 rounded-full hover:bg-red-500 transition-colors duration-300 shadow-md text-lg"
               aria-label="Send Message"
             >
               Send Message

@@ -1,6 +1,6 @@
 // src/components/Donation.tsx
-import React from 'react';
-import { APP_CONSTANTS } from '../constants';
+import { HandHeart } from "lucide-react";
+import { APP_CONSTANTS } from "../constants";
 
 /**
  * Donation Component
@@ -9,22 +9,32 @@ import { APP_CONSTANTS } from '../constants';
  */
 export default function Donation() {
   return (
-    <section id="donate" className="bg-red-700 text-white py-16 md:py-20">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+    <section
+      id="donate"
+      className="py-16 md:py-20 flex flex-col justify-center items-center relative z-10"
+    >
+      <div className="mx-auto px-6 w-[90%] md:w-[60%]">
+        {/*<HandHeart className="w-12 h-12 text-pink-500 mx-auto" />*/}
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-700 mb-12">
           Support the Movement
         </h2>
-        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
-          Your generous contribution fuels our campaign, powers our grassroots outreach, and brings us one step closer to victory. Together, we can build a stronger APC for a better Sierra Leone.
-        </p>
-        <a
-          href={APP_CONSTANTS.donateLink}
-          className="bg-white text-red-600 font-bold text-xl py-4 px-12 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 shadow-2xl inline-block"
-          aria-label="Donate to the campaign"
-        >
-          Contribute Now
-        </a>
+
+        <div className="text-center p-2 text-gray-700">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+            Your generous contribution fuels our campaign, powers our grassroots
+            outreach, and brings us one step closer to victory. Together, we can
+            build a stronger APC for a better Sierra Leone.
+          </p>
+          <a
+            href={APP_CONSTANTS.donateLink}
+            className="inline-flex items-center px-6 py-3 mt-4 bg-[#fe4a49] font-semibold rounded-full shadow hover:text-white transition"
+            aria-label="Donate to the campaign"
+          >
+            Contribute Now
+            <HandHeart className="w-6 h-6 text-gray-700 hover:text-white" />
+          </a>
+        </div>
       </div>
     </section>
   );
-};
+}
