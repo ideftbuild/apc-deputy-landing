@@ -1,5 +1,4 @@
 // src/components/SocialMedia.tsx
-import React from "react";
 import { APP_CONSTANTS } from "../constants";
 
 /**

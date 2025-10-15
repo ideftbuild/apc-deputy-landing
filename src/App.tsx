@@ -9,7 +9,6 @@ import "./App.css";
 import ContactForm from "./components/ContactForm";
 import SocialMedia from "./components/SocialMedia";
 import Footer from "./components/Footer";
-import CoreValues from "./components/CoreValues";
 
 /**
  * The main application component.

@@ -1,5 +1,4 @@
 // src/components/Attributes.tsx
-import React from 'react';
 
 /**
  * Attributes Component

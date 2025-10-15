@@ -48,7 +48,7 @@ input {
 }
 
 .vision-mission-bg {
-    background-image: url("img/vision-bgImage.jpg");
+    background-image: url("/img/vision-bgImage.webp");
     background-attachment: fixed;
     background-size: cover;
 }
