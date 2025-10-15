@@ -79,11 +79,11 @@ const values = [
 export default function CoreValues() {
   return (
     <section id="core-values" className="py-6 md:py-8">
-      <div className="mx-auto px-4 flex flex-row flex-wrap justify-center gap-6 md:gap-20 md:w-[60%] place-items-center">
+      <div className="mx-auto px-4 flex flex-wrap md:flex-nowrap md:flex-row justify-center gap-6 md:gap-10 md:w-[60%] place-items-center">
         {values.map((value) => (
           <div
             key={value.title}
-            className="relative group w-[120px] h-[120px] md:w-[150px] md:h-[150px] md:p-6 p-4 rounded-full shadow-md hover:shadow-xl bg-white"
+            className="relative group w-[120px] h-[120px] md:w-[140px] md:h-[140px] md:p-8 p-4 rounded-full shadow-md hover:shadow-xl bg-white"
           >
             <div className="flex justify-center mt-2 md:mb-2">{value.icon}</div>
             <h3 className="font-bold text-gray-800 text-center">
