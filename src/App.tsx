@@ -25,7 +25,13 @@ export default function App() {
         <Hero />
 
         <div className="relative z-20 bg-[#f5f5f5]">
-          <p className="text-center">ALM we move!</p>
+          <div className="flex items-center justify-center gap-4 my-12">
+            <div className="h-px bg-red-300 w-20"></div>
+            <p className="text-sm font-semibold text-red-600 uppercase tracking-widest">
+              ALM we move!
+            </p>
+            <div className="h-px bg-red-300 w-20"></div>
+          </div>
           <About />
           <VisionMission />
         </div>
