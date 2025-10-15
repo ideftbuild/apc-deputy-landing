@@ -13,10 +13,10 @@ export default function VisionMission() {
           Vision & Mission
         </h2>
         <div className="vision-mission-bg flex flex-col items-center gap-6 rounded-lg">
-          <div className="py-16 px-6 flex flex-col items-center">
+          <div className="pt-12 px-6 flex flex-col items-center">
             <h3
               className="text-xl font-semibold text-gray-900 mb-6 text-center
-                   border-b-2 border-red-600 pb-2 inline-block bg-white/90 px-4 rounded"
+                   border-b-2 border-gray-600 pb-2 inline-block bg-white/90 px-4 rounded"
             >
               Vision
             </h3>
@@ -35,10 +35,10 @@ export default function VisionMission() {
             </div>
           </div>
           <div className="p-8 rounded-lg">
-            <div className="flex justify-center mb-12">
+            <div className="flex justify-center mb-6">
               <h3
                 className="text-xl font-semibold text-gray-900 mb-6 text-center
-                     border-b-2 border-red-600 pb-2 inline-block bg-white/90 px-4 rounded"
+                     border-b-2 border-gray-600 pb-2 inline-block bg-white/90 px-4 rounded"
               >
                 Mission
               </h3>
