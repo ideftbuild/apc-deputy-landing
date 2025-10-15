@@ -1,6 +1,6 @@
 // src/components/Footer.tsx
-import React from 'react';
-import { APP_CONSTANTS } from '../constants';
+import React from "react";
+import { APP_CONSTANTS } from "../constants";
 
 /**
  * Footer Component
@@ -8,13 +8,12 @@ import { APP_CONSTANTS } from '../constants';
  * and a concluding tagline. It serves as the closing element of the landing page.
  */
 export default function Footer() {
-
   return (
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-8 text-center">
         <h3 className="text-2xl font-bold text-red-500">
-           {APP_CONSTANTS.candidateName.full}
-          </h3>
+          {APP_CONSTANTS.candidateName.full}
+        </h3>
 
         <p className="text-gray-400 mt-2">
           Election Date: <span className="font-semibold">March 2026</span>
@@ -28,11 +27,8 @@ export default function Footer() {
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} All Rights Reserved.
           </p>
-           <p className="text-gray-600 text-xs mt-1">
-            Paid for by the Committee to Elect {APP_CONSTANTS.candidateName.full}.
-          </p>
         </div>
       </div>
     </footer>
   );
-};
+}

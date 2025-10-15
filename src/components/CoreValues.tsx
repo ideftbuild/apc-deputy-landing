@@ -1,5 +1,4 @@
 // src/components/CoreValues.tsx
-import React from "react";
 
 /**
  * Core Values Component
@@ -72,22 +71,34 @@ const values = [
       </svg>
     ),
     title: "Leadership",
+    description:
+      "Leading by example with a commitment to listen, serve, and unite our community.",
   },
 ];
 
 export default function CoreValues() {
   return (
-    <section id="core-values" className="py-16 md:py-24">
-      <div className="mx-auto px-4 grid grid-cols-3 gap-6 md:w-[60%] place-items-center">
+    <section id="core-values" className="py-6 md:py-8">
+      <div className="mx-auto px-4 flex flex-row flex-wrap justify-center gap-6 md:gap-20 md:w-[60%] place-items-center">
         {values.map((value) => (
           <div
             key={value.title}
-            className="w-[110px] h-[110px] md:w-fit md:h-fit md:p-6 p-4 rounded-full shadow-md hover:shadow-xl bg-blue-100"
+            className="relative group w-[120px] h-[120px] md:w-[150px] md:h-[150px] md:p-6 p-4 rounded-full shadow-md hover:shadow-xl bg-white"
           >
             <div className="flex justify-center mt-2 md:mb-2">{value.icon}</div>
             <h3 className="font-bold text-gray-800 text-center">
               {value.title}
             </h3>
+            <span
+              className="absolute left-1/2 -translate-x-1/2 -top-2 -translate-y-full
+                          hidden group-hover:block w-64 rounded-lg bg-gray-900 text-[#f5f5f5]
+                          shadow-xl px-4 py-3 text-sm pointer-events-none
+                          after:content-[''] after:absolute after:top-full after:left-1/2
+                          after:-translate-x-1/2 after:border-8 after:border-transparent
+                          after:border-t-gray-900"
+            >
+              {value.description}
+            </span>
           </div>
         ))}
       </div>

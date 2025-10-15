@@ -11,7 +11,7 @@ export default function Donation() {
   return (
     <section
       id="donate"
-      className="py-16 md:py-20 flex flex-col justify-center items-center relative z-10"
+      className="py-16 md:py-20 flex flex-col justify-center items-center z-20 sticky"
     >
       <div className="mx-auto px-6 w-[90%] md:w-[60%]">
         {/*<HandHeart className="w-12 h-12 text-pink-500 mx-auto" />*/}
@@ -31,7 +31,7 @@ export default function Donation() {
             aria-label="Donate to the campaign"
           >
             Contribute Now
-            <HandHeart className="w-6 h-6 text-gray-700 hover:text-white" />
+            <HandHeart className="w-6 h-6" />
           </a>
         </div>
       </div>

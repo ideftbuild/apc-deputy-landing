@@ -1,5 +1,5 @@
 // src/components/About.tsx
-
+import CoreValues from "./CoreValues";
 /**
  * About Component
  * Provides a detailed overview of the candidate's background, including their biography,
@@ -34,6 +34,8 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <CoreValues />
     </section>
   );
 }

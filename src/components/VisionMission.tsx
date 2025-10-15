@@ -7,57 +7,77 @@ import { Pin } from "lucide-react";
  */
 export default function VisionMission() {
   return (
-    <section id="vision-mission" className="py-16 md:py-24 md:px-20">
-      <div className="mx-auto px-6">
+    <section id="vision-mission" className="px-6 py-16 md:px-20">
+      <div className="mx-auto rounded-lg">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
-          Our Vision & Mission
+          Vision & Mission
         </h2>
-
-        <div className="bg-white flex flex-col items-center gap-6 rounded-lg">
-          <div className="p-8 flex flex-col items-center md:w-[80%]">
-            <p className="text-gray-700 leading-relaxed md:w-[60%] md:text-center">
-              To build a revitalized, unified, and forward-thinking APC party
-              where every member, from the grassroots to the national level,
-              feels valued, heard, and empowered. I envision a secretariat that
-              is a model of efficiency, transparency, and innovation, fully
-              equipped to support our journey to victory in 2026 and beyond.
-            </p>
-            <a
-              href="#"
-              className="w-max border-b mt-4 cursor-pointer hover:text-gray-800"
+        <div className="vision-mission-bg flex flex-col items-center gap-6 rounded-lg">
+          <div className="py-16 px-6 flex flex-col items-center">
+            <h3
+              className="text-xl font-semibold text-gray-900 mb-6 text-center
+                   border-b-2 border-red-600 pb-2 inline-block bg-white/90 px-4 rounded"
             >
-              Read more
-            </a>
+              Vision
+            </h3>
+            <div className="flex flex-col items-center w-full md:max-w-4xl bg-gray-50 rounded-2xl p-10 border border-gray-100">
+              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mb-4">
+                <Pin className="w-5 h-5 text-red-600" />
+              </div>
+              <p className="text-lg leading-relaxed text-gray-700  mb-6">
+                To build a revitalized, unified, and forward-thinking APC party
+                where every member, from the grassroots to the national level,
+                feels valued, heard, and empowered. I envision a secretariat
+                that is a model of efficiency, transparency, and innovation,
+                fully equipped to support our journey to victory in 2026 and
+                beyond.
+              </p>
+            </div>
           </div>
-
           <div className="p-8 rounded-lg">
-            <h3 className="text-2xl font-bold mb-4 text-center">My Mission</h3>
+            <div className="flex justify-center mb-12">
+              <h3
+                className="text-xl font-semibold text-gray-900 mb-6 text-center
+                     border-b-2 border-red-600 pb-2 inline-block bg-white/90 px-4 rounded"
+              >
+                Mission
+              </h3>
+            </div>
+
             <ul className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6 text-gray-700 space-y-3">
-              <li className="rounded-md shadow-md shadow-red-300 p-4 flex flex-col items-center gap-2">
-                <Pin className="w-6 h-6 text-green-800" />
+              <li className="rounded-md bg-white shadow-md p-4 flex flex-col items-center gap-2">
+                <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Pin className="w-5 h-5 text-red-600" />
+                </div>
                 <p>
                   To modernize our party's administrative functions by
                   leveraging technology for seamless record-keeping and
                   communication.
                 </p>
               </li>
-              <li className="rounded-md shadow-md shadow-red-300 p-4 flex flex-col items-center gap-2">
-                <Pin className="w-6 h-6 text-blue-800" />
+              <li className="rounded-md bg-white shadow-md p-4 flex flex-col items-center gap-2">
+                <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Pin className="w-5 h-5 text-red-600" />
+                </div>
                 <p>
                   To serve as an accessible bridge between the party leadership
                   and our diverse membership, ensuring a constant flow of ideas
                   and feedback.
                 </p>
               </li>
-              <li className="rounded-md shadow-md shadow-red-300 p-4 flex flex-col items-center gap-2">
-                <Pin className="w-6 h-6 text-green-800" />
+              <li className="rounded-md bg-white shadow-md p-4 flex flex-col items-center gap-2">
+                <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Pin className="w-5 h-5 text-red-600" />
+                </div>
                 <p>
                   To champion the inclusion of youth and women in all party
                   structures and decision-making processes.
                 </p>
               </li>
-              <li className="rounded-md shadow-md shadow-red-300 p-4 flex flex-col items-center gap-2">
-                <Pin className="w-6 h-6 text-blue-800" />
+              <li className="rounded-md bg-white shadow-md p-4 flex flex-col items-center gap-2">
+                <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Pin className="w-5 h-5 text-red-600" />
+                </div>
                 <p>
                   To uphold the party's constitution with integrity, ensuring
                   fairness, discipline, and due process for all members.

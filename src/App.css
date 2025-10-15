@@ -47,7 +47,7 @@ input {
     /*background: transparent;*/
 }
 
-#vision-mission {
+.vision-mission-bg {
     background-image: url("img/vision-bgImage.jpg");
     background-attachment: fixed;
     background-size: cover;

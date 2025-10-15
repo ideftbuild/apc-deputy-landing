@@ -6,7 +6,6 @@ import About from "./components/About";
 import VisionMission from "./components/VisionMission";
 import Donation from "./components/Donation";
 import "./App.css";
-import { Contact } from "lucide-react";
 import ContactForm from "./components/ContactForm";
 import SocialMedia from "./components/SocialMedia";
 import Footer from "./components/Footer";
@@ -29,7 +28,6 @@ export default function App() {
         <div className="relative z-20 bg-[#f5f5f5]">
           <p className="text-center">ALM we move!</p>
           <About />
-          <CoreValues />
           <VisionMission />
         </div>
         <Donation />

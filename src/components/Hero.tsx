@@ -26,14 +26,14 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex justify-center text-black sticky top-0 sticky z-10"
+      className="flex justify-center text-black top-0 sticky z-10"
       style={{ opacity: scrollOpacity }}
     >
       <div className="flex flex-col-reverse md:flex-row items-center">
         <img
           src="img/placeholder_bg.webp"
           alt="Hero image showing unity"
-          className="md:w-1/2 md:h-screen"
+          className="md:w-[50%] md:h-screen"
         />
 
         <div className="md:w-2/3 flex flex-col items-center jusmt-4 justify-center md:text-left w-[86%] md:w-[80%]">
@@ -41,10 +41,12 @@ export default function Hero() {
             Change We Deserve
           </h2>
 
-          <p>A new generation driving unity and progress</p>
+          <p className="text-center">
+            A new generation driving unity and progress
+          </p>
           <a
             href="#about"
-            className="inline-flex items-center px-6 py-3 my-2 bg-[#fe4a49] font-semibold rounded-full shadow hover:text-white transition"
+            className="inline-flex items-center px-6 py-3 my-6 mb-8 bg-[#fe4a49] font-semibold rounded-full shadow hover:text-white transition"
           >
             Discover My Journey
             <svg
