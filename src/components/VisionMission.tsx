@@ -28,7 +28,7 @@ export default function VisionMission() {
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
-              <Eye size={20} />
+              <Eye className="w-4 h-4 md:w-8 md:h-8" />
               Vision
             </button>
             <button
@@ -39,7 +39,7 @@ export default function VisionMission() {
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
-              <Target size={20} />
+              <Target className="w-4 h-4 md:w-8 md:h-8" />
               Mission
             </button>
           </div>
@@ -54,15 +54,15 @@ export default function VisionMission() {
             }`}
           >
             <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16">
-              <div className="flex items-start gap-6 mb-8">
+              <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
                 <div className="flex-shrink-0 w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center">
-                  <Eye size={32} className="text-red-500" />
+                  <Eye className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                     Our Vision
                   </h3>
-                  <p className="text-xl text-gray-700 leading-relaxed">
+                  <p className="md:text-xl text-gray-700 leading-relaxed">
                     To create a Sierra Leone where every citizen, regardless of
                     background, has equal access to justice, opportunities, and
                     the resources needed to thrive. We envision a nation where
@@ -77,7 +77,7 @@ export default function VisionMission() {
               <div className="grid md:grid-cols-3 gap-6 mt-12">
                 <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
                   <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                    <ChevronRight className="text-red-500" size={24} />
+                    <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">Equality</h4>
                   <p className="text-gray-600 text-sm">
@@ -86,7 +86,7 @@ export default function VisionMission() {
                 </div>
                 <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
                   <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                    <ChevronRight className="text-red-500" size={24} />
+                    <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">
                     Youth Leadership
@@ -97,7 +97,7 @@ export default function VisionMission() {
                 </div>
                 <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
                   <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                    <ChevronRight className="text-red-500" size={24} />
+                    <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">
                     Sustainable Growth
@@ -119,15 +119,15 @@ export default function VisionMission() {
             }`}
           >
             <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16">
-              <div className="flex items-start gap-6 mb-8">
+              <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
                 <div className="flex-shrink-0 w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center">
-                  <Target size={32} className="text-red-500" />
+                  <Target className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                     Our Mission
                   </h3>
-                  <p className="text-xl text-gray-700 leading-relaxed">
+                  <p className="md:text-xl text-gray-700 leading-relaxed">
                     To serve the people of Sierra Leone through principled
                     leadership, innovative policy-making, and unwavering
                     commitment to community development. We strive to bridge the
