@@ -29,11 +29,11 @@ export default function Hero() {
       className="flex justify-center text-black top-0 sticky z-10"
       style={{ opacity: scrollOpacity }}
     >
-      <div className="flex flex-col-reverse md:flex-row items-center">
+      <div className="flex flex-col-reverse lg:flex-row items-center">
         <img
           src="img/placeholder_bg.webp"
           alt="Hero image showing unity"
-          className="md:w-[50%] md:h-screen"
+          className="lg:min-w-[50%] lg:h-screen"
         />
 
         <div className="flex flex-col items-center jusmt-4 justify-center md:text-left w-[86%]">
