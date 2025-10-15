@@ -27,11 +27,11 @@ export default function Donation() {
           </p>
           <a
             href={APP_CONSTANTS.donateLink}
-            className="inline-flex items-center px-6 py-3 mt-4 bg-[#fe4a49] font-semibold rounded-full shadow hover:text-white transition"
-            aria-label="Donate to the campaign"
+            className="inline-flex items-center gap-2 px-6 py-3 mt-4 bg-red-500 text-white font-semibold rounded-full shadow-md hover:bg-red-600 focus:ring-2 focus:ring-red-400 focus:outline-none transition-all duration-200"
+            aria-label="Contribute to the campaign"
           >
             Contribute Now
-            <HandHeart className="w-6 h-6" />
+            <HandHeart className="w-5 h-5" />
           </a>
         </div>
       </div>

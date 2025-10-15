@@ -10,7 +10,7 @@ const values = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 md:h-8 md:w-8 text-[#fe4a49]"
+        className="h-6 w-6 md:h-8 md:w-8 text-red-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -31,7 +31,7 @@ const values = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 md:h-8 md:w-8 text-[#fe4a49]"
+        className="h-6 w-6 md:h-8 md:w-8 text-red-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -52,7 +52,7 @@ const values = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 md:h-8 md:w-8 text-[#fe4a49]"
+        className="h-6 w-6 md:h-8 md:w-8 text-red-500"
         fill="none"
         stroke="currentColor"
         strokeWidth={2}

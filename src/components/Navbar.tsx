@@ -39,7 +39,7 @@ export default function Navbar() {
           </a>
           <a
             href={APP_CONSTANTS.donateLink}
-            className="bg-[#fe4a49] text-white px-6 py-2 rounded-md font-medium hover:bg-red-600 transition-colors"
+            className="bg-red-500 text-white px-6 py-2 rounded-md font-medium hover:bg-red-600 transition-colors"
           >
             Donate
           </a>
@@ -49,13 +49,13 @@ export default function Navbar() {
         <div className="flex md:hidden items-center space-x-4">
           <a
             href={APP_CONSTANTS.donateLink}
-            className="bg-[#fe4a49] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
+            className="bg-red-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-600 transition-colors"
           >
             Donate
           </a>
           <button
             onClick={toggleMenu}
-            className="text-gray-800 hover:text-red-600 focus:outline-none focus:text-red-600"
+            className="text-gray-800 hover:text-red-500 focus:outline-none focus:text-red-500"
             aria-label="Toggle menu"
           >
             <svg

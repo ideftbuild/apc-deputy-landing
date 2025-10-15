@@ -206,7 +206,7 @@ export default function VisionMission() {
           <p className="text-gray-600 mb-6">
             Join us in building the change we deserve
           </p>
-          <button className="bg-red-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-600 transition-colors duration-300 shadow-lg hover:shadow-xl">
+          <button className="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-500 transition-colors duration-300 shadow-lg hover:shadow-xl">
             Get Involved
           </button>
         </div>

@@ -89,7 +89,7 @@ export default function ContactForm() {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-[#fe4a49] text-white font-bold py-3 px-10 rounded-full hover:bg-red-500 transition-colors duration-300 shadow-md text-lg"
+              className="bg-red-500 text-white font-bold py-3 px-10 rounded-full hover:bg-red-600 transition-colors duration-300 shadow-md text-lg"
               aria-label="Send Message"
             >
               Send Message

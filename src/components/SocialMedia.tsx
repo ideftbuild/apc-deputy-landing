@@ -102,7 +102,7 @@ export default function SocialMedia() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.ariaLabel}
-              className="text-white bg-[#fe4a49] p-4 rounded-full hover:bg-red-500 hover:scale-110 transform transition-all duration-300 shadow-lg"
+              className="text-white bg-red-500 p-4 rounded-full hover:bg-red-600 hover:scale-110 transform transition-all duration-300 shadow-lg"
             >
               {link.icon}
             </a>
