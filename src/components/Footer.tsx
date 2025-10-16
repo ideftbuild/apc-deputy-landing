@@ -8,24 +8,35 @@ import { APP_CONSTANTS } from "../constants";
  */
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white">
-      <div className="container mx-auto px-6 py-8 text-center">
-        <h3 className="text-2xl font-bold text-red-500">
-          {APP_CONSTANTS.candidateName.full}
-        </h3>
+    <footer className="bg-[#f5f5f5]">
+      <div className="container mx-auto px-6 py-12 md:px-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-gray-300">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                {APP_CONSTANTS.candidateName.full}
+              </h3>
+              <p className="text-gray-600 text-sm">
+                APC National Secretary • March 2026
+              </p>
+            </div>
 
-        <p className="text-gray-400 mt-2">
-          Election Date: <span className="font-semibold">March 2026</span>
-        </p>
+            <div className="text-center md:text-right">
+              <p className="text-lg font-semibold text-red-600 mb-1">
+                Vote for Progress
+              </p>
+              <p className="text-gray-700 text-sm">
+                Together, We Build a Stronger APC
+              </p>
+            </div>
+          </div>
 
-        <p className="text-gray-500 mt-4 text-sm">
-          Together, We Build a Stronger APC.
-        </p>
-
-        <div className="mt-6 border-t border-gray-700 pt-6">
-          <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} All Rights Reserved.
-          </p>
+          <div className="pt-6 text-center">
+            <p className="text-gray-500 text-sm">
+              &copy; {new Date().getFullYear()}{" "}
+              {APP_CONSTANTS.candidateName.full}. All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
