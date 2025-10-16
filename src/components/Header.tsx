@@ -10,7 +10,7 @@ import { APP_CONSTANTS } from "../constants";
  */
 export default function Header() {
   return (
-    <header className="shadow-sm">
+    <header className="">
       <div className="flex justify-between px-4 lg:px-8 sm:px-6 bg-white">
         <div className="flex items-center">
           <img
