@@ -78,7 +78,7 @@ const values = [
 
 export default function CoreValues() {
   return (
-    <section id="core-values" className="py-6 md:py-8">
+    <section id="core-values" className="py-2 md:py-8">
       <div className="mx-auto px-4 flex flex-wrap md:flex-nowrap md:flex-row justify-center gap-6 md:gap-10 md:w-[60%] place-items-center">
         {values.map((value) => (
           <div

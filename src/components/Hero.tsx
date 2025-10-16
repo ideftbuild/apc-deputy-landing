@@ -46,7 +46,7 @@ export default function Hero() {
           </p>
           <a
             href="#about"
-            className="inline-flex items-center px-6 py-3 my-6 mb-8 bg-red-500 font-semibold rounded-full shadow hover:text-white transition"
+            className="inline-flex items-center px-6 py-3 my-6 mb-8 bg-red-500 text-white font-semibold rounded-full shadow hover:bg-red-600 transition"
           >
             Discover My Journey
             <svg
