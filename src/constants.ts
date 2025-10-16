@@ -7,6 +7,7 @@
  */
 export const APP_CONSTANTS = {
   appName: "APC Deputy Landing",
+  recipientEmail: "contact@example.com",
   candidateName: {
     short: "Ibrahim K. Bangura",
     full: "Ibrahim Komkanda Bangura",
@@ -18,7 +19,7 @@ export const APP_CONSTANTS = {
   },
   contact: {
     email: "info@example.com",
-    phone: "[WhatsApp Link]"
+    phone: "[WhatsApp Link]",
   },
-  donateLink: "#donate"
+  donateLink: "#donate",
 };

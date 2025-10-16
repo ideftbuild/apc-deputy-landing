@@ -1,4 +1,5 @@
 // src/components/ContactForm.tsx
+import { APP_CONSTANTS } from "@/constants";
 
 /**
  * Contact Form Component
@@ -7,7 +8,7 @@
  */
 export default function ContactForm() {
   // The target email address for the mailto link.
-  const recipientEmail = "contact@example.com";
+  const { recipientEmail } = APP_CONSTANTS;
   const subject = "Message from the Campaign Website";
 
   // The form's `action` attribute will construct the mailto link.
