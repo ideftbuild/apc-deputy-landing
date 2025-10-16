@@ -46,9 +46,3 @@ input {
     border-bottom: 1px solid #ccc;
     /*background: transparent;*/
 }
-
-.vision-mission-bg {
-    background-color: #c9a67c;
-    background-attachment: fixed;
-    background-size: cover;
-}
