@@ -49,8 +49,8 @@ export default function VisionMission() {
           <div
             className={`transition-all duration-500 ${
               activeTab === "vision"
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 absolute inset-0 translate-x-8 pointer-events-none"
+                ? "opacity-100"
+                : "transition-all duration-300 opacity-0 absolute inset-0 pointer-events-none"
             }`}
           >
             <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16">
@@ -114,8 +114,8 @@ export default function VisionMission() {
           <div
             className={`transition-all duration-500 ${
               activeTab === "mission"
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 absolute inset-0 -translate-x-8 pointer-events-none"
+                ? "opacity-100"
+                : "transition-all duration-300 opacity-0 absolute inset-0 pointer-events-none"
             }`}
           >
             <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16">
@@ -139,7 +139,7 @@ export default function VisionMission() {
               </div>
 
               {/* Mission Actions */}
-              <div className="space-y-4 mt-12">
+              <div className="grid gap-6 mt-12">
                 <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
                   <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
                     1

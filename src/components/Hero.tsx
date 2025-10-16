@@ -37,7 +37,7 @@ export default function Hero() {
         />
 
         <div className="flex flex-col items-center jusmt-4 justify-center md:text-left w-[86%]">
-          <h2 className="text-5xl md:text-8xl font-extrabold leading-tight mb-8 text-center">
+          <h2 className="text-5xl md:text-8xl font-extrabold leading-tight mb-6 text-center mt-4">
             Change We Deserve
           </h2>
 
