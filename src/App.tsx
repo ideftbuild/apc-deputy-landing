@@ -23,9 +23,7 @@ export default function App() {
       <Header />
 
       <main>
-        <ScrollReveal>
-          <Hero />
-        </ScrollReveal>
+        <Hero />
 
         <div className="relative z-20 bg-[#f5f5f5]">
           <div className="flex items-center justify-center gap-4 my-12">
@@ -36,17 +34,17 @@ export default function App() {
             <div className="h-px bg-red-300 w-20"></div>
           </div>
           <About />
-          <ScrollReveal animationType="fadeUp">
+          <ScrollReveal>
             <VisionMission />
           </ScrollReveal>
         </div>
         <Donation />
 
         <div className="flex flex-col md:flex-row-reverse items-center justify-center relative z-10">
-          <ScrollReveal animationType="fadeRight">
+          <ScrollReveal animationType="fadeLeft">
             <ContactForm />
           </ScrollReveal>
-          <ScrollReveal animationType="fadeLeft">
+          <ScrollReveal animationType="fadeRight">
             <SocialMedia />
           </ScrollReveal>
         </div>
