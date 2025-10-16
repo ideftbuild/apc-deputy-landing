@@ -37,7 +37,7 @@ export default function App() {
         </div>
         <Donation />
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 relative z-10">
+        <div className="flex flex-col md:flex-row-reverse items-center justify-center relative z-10">
           <ContactForm />
           <SocialMedia />
         </div>
