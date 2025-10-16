@@ -5,7 +5,7 @@ export default function VisionMission() {
   const [activeTab, setActiveTab] = useState("vision");
 
   return (
-    <div className="py-24 px-6">
+    <section id="vision-mission" className="py-12 md:py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -206,11 +206,14 @@ export default function VisionMission() {
           <p className="text-gray-600 mb-6">
             Join us in building the change we deserve
           </p>
-          <button className="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-500 transition-colors duration-300 shadow-lg hover:shadow-xl">
+          <a
+            href="#"
+            className="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-500 transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
             Get Involved
-          </button>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
