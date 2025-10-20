@@ -33,8 +33,6 @@ export default function About() {
                 Learn more
               </a>
             </div>
-
-            <CoreValues />
           </div>
         </div>
       </div>

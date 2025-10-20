@@ -10,6 +10,7 @@ import ContactForm from "./components/ContactForm";
 import SocialMedia from "./components/SocialMedia";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
+import CoreValues from "./components/CoreValues";
 
 /**
  * The main application component.
@@ -33,7 +34,9 @@ export default function App() {
             </p>
             <div className="h-px bg-red-300 w-20"></div>
           </div>
+
           <About />
+          <CoreValues />
           <VisionMission />
         </div>
         <Donation />
