@@ -46,3 +46,8 @@ input {
     border-bottom: 1px solid #ccc;
     /*background: transparent;*/
 }
+
+html,
+body {
+    overflow-x: hidden;
+}
