@@ -44,11 +44,11 @@ const values = [
 
 export default function CoreValues() {
   const [isPaused, setIsPaused] = React.useState(false);
-  const [activeIndex, setActiveIndex] = React.useState(null);
+  const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
 
   const extendedValues = [...values, ...values, ...values];
 
-  const handleClick = (idx) => {
+  const handleClick = (idx: number) => {
     if (activeIndex === idx) {
       setActiveIndex(null);
       setIsPaused(false);
@@ -69,7 +69,7 @@ export default function CoreValues() {
       <div className="max-w-5xl mx-auto px-4">
         <div className="relative rounded-2xl py-12 overflow-hidden">
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-100 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-200 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-300 to-transparent z-10 pointer-events-none" />
 
           <motion.div
             className="flex gap-6 md:gap-8"

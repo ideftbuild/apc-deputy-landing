@@ -1,5 +1,4 @@
 // src/components/About.tsx
-import CoreValues from "./CoreValues";
 
 /**
  * About Component
