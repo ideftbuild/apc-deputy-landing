@@ -12,6 +12,7 @@ interface ScrollRevealProps {
     | "scale"
     | "parallax";
   duration?: number;
+  animateOnce?: boolean;
   delay?: number;
 }
 
@@ -19,6 +20,7 @@ export default function ScrollReveal({
   children,
   animationType = "fadeUp",
   duration = 0.8,
+  animateOnce = true,
   delay = 0,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -77,7 +79,7 @@ export default function ScrollReveal({
     <motion.div
       ref={ref}
       {...animationProps}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: animateOnce, amount: 0.3 }}
       transition={{
         duration,
         delay,
