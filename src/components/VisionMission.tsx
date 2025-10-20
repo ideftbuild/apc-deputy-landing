@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Eye, Target, ChevronRight } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 export default function VisionMission() {
   const [activeTab, setActiveTab] = useState("vision");
@@ -55,13 +56,7 @@ export default function VisionMission() {
           >
             <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16">
               <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
-                <div className="flex-shrink-0 w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center">
-                  <Eye className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
-                </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                    Our Vision
-                  </h3>
                   <p className="md:text-xl text-gray-700 leading-relaxed">
                     To create a Sierra Leone where every citizen, regardless of
                     background, has equal access to justice, opportunities, and
@@ -75,37 +70,58 @@ export default function VisionMission() {
 
               {/* Vision Pillars */}
               <div className="grid md:grid-cols-3 gap-6 mt-12">
-                <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                    <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
+                <ScrollReveal animationType="fadeLeft" animateOnce={false}>
+                  <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
+                    <img
+                      src="/img/equality_img.jpg"
+                      alt="Equality Image"
+                      className="w-full h-auto object-cover mb-4 rounded-md"
+                    />
+                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                      <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
+                    </div>
+                    <h4 className="font-bold text-gray-900 mb-2">Equality</h4>
+                    <p className="text-gray-600 text-sm">
+                      Justice and opportunity for all citizens
+                    </p>
                   </div>
-                  <h4 className="font-bold text-gray-900 mb-2">Equality</h4>
-                  <p className="text-gray-600 text-sm">
-                    Justice and opportunity for all citizens
-                  </p>
-                </div>
-                <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                    <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
+                </ScrollReveal>
+                <ScrollReveal animationType="scale" animateOnce={false}>
+                  <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
+                    <img
+                      src="/img/youth_leadership_img.jpg"
+                      alt="Youth Leadership Image"
+                      className="w-full h-auto object-cover mb-4 rounded-md"
+                    />
+                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                      <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
+                    </div>
+                    <h4 className="font-bold text-gray-900 mb-2">
+                      Youth Leadership
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Empowering the next generation
+                    </p>
                   </div>
-                  <h4 className="font-bold text-gray-900 mb-2">
-                    Youth Leadership
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    Empowering the next generation
-                  </p>
-                </div>
-                <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
-                  <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                    <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
+                </ScrollReveal>
+                <ScrollReveal animationType="fadeRight" animateOnce={false}>
+                  <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
+                    <img
+                      src="/img/sustainable_growth_img.jpg"
+                      alt="Sustainable Growth Image"
+                      className="w-full h-auto object-cover mb-4 rounded-md"
+                    />
+                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                      <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
+                    </div>
+                    <h4 className="font-bold text-gray-900 mb-2">
+                      Sustainable Growth
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Building a prosperous future
+                    </p>
                   </div>
-                  <h4 className="font-bold text-gray-900 mb-2">
-                    Sustainable Growth
-                  </h4>
-                  <p className="text-gray-600 text-sm">
-                    Building a prosperous future
-                  </p>
-                </div>
+                </ScrollReveal>
               </div>
             </div>
           </div>
@@ -120,13 +136,7 @@ export default function VisionMission() {
           >
             <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16">
               <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
-                <div className="flex-shrink-0 w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center">
-                  <Target className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
-                </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                    Our Mission
-                  </h3>
                   <p className="md:text-xl text-gray-700 leading-relaxed">
                     To serve the people of Sierra Leone through principled
                     leadership, innovative policy-making, and unwavering
@@ -140,62 +150,70 @@ export default function VisionMission() {
 
               {/* Mission Actions */}
               <div className="grid gap-6 mt-12">
-                <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
-                  <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
-                    1
+                <ScrollReveal animateOnce={false}>
+                  <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
+                    <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
+                      1
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">
+                        Advocate for Justice
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Champion policies that ensure fair treatment and equal
+                        rights for all citizens
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">
-                      Advocate for Justice
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Champion policies that ensure fair treatment and equal
-                      rights for all citizens
-                    </p>
+                </ScrollReveal>
+                <ScrollReveal animateOnce={false}>
+                  <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
+                    <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
+                      2
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">
+                        Empower Communities
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Build strong, self-sufficient communities through
+                        education and economic opportunities
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
-                  <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
-                    2
+                </ScrollReveal>
+                <ScrollReveal animateOnce={false}>
+                  <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
+                    <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
+                      3
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">
+                        Drive Innovation
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Implement forward-thinking solutions to address
+                        contemporary challenges
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">
-                      Empower Communities
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Build strong, self-sufficient communities through
-                      education and economic opportunities
-                    </p>
+                </ScrollReveal>
+                <ScrollReveal animateOnce={false}>
+                  <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
+                    <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
+                      4
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1">
+                        Lead with Integrity
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Demonstrate transparency, accountability, and ethical
+                        governance in all actions
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
-                  <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
-                    3
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">
-                      Drive Innovation
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Implement forward-thinking solutions to address
-                      contemporary challenges
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
-                  <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
-                    4
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">
-                      Lead with Integrity
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Demonstrate transparency, accountability, and ethical
-                      governance in all actions
-                    </p>
-                  </div>
-                </div>
+                </ScrollReveal>
               </div>
             </div>
           </div>

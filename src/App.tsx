@@ -25,8 +25,8 @@ export default function App() {
       <main>
         <Hero />
 
-        <div className="relative z-20 bg-[#f5f5f5]">
-          <div className="flex items-center justify-center gap-4 my-12">
+        <div className="relative z-20 bg-[#f5f5f5] overflow-hidden">
+          <div className="flex items-center justify-center gap-4 pt-8">
             <div className="h-px bg-red-300 w-20"></div>
             <p className="text-sm font-semibold text-red-500 uppercase tracking-widest">
               ALM we move!
@@ -34,17 +34,15 @@ export default function App() {
             <div className="h-px bg-red-300 w-20"></div>
           </div>
           <About />
-          <ScrollReveal>
-            <VisionMission />
-          </ScrollReveal>
+          <VisionMission />
         </div>
         <Donation />
 
-        <div className="flex flex-col md:flex-row-reverse items-center justify-center relative z-10">
-          <ScrollReveal animationType="fadeLeft">
+        <div className="flex flex-col md:flex-row-reverse items-center justify-center relative z-10 overflow-hidden">
+          <ScrollReveal animationType="fadeLeft" animateOnce={false}>
             <ContactForm />
           </ScrollReveal>
-          <ScrollReveal animationType="fadeRight">
+          <ScrollReveal animationType="fadeRight" animateOnce={false}>
             <SocialMedia />
           </ScrollReveal>
         </div>

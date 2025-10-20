@@ -1,6 +1,5 @@
 // src/components/Hero.tsx
 import { useEffect, useState } from "react";
-import ScrollReveal from "./ScrollReveal";
 /**
  * Hero Component
  * Features a prominent candidate image placeholder, a compelling introduction,
@@ -30,16 +29,14 @@ export default function Hero() {
       className="flex justify-center text-black top-0 sticky z-10"
       style={{ opacity: scrollOpacity }}
     >
-      <div className="flex flex-col-reverse lg:flex-row items-center">
-        <ScrollReveal>
-          <img
-            src="img/placeholder_bg.webp"
-            alt="Hero image showing unity"
-            className="lg:min-w-[50%] lg:h-screen"
-          />
-        </ScrollReveal>
+      <div className="flex flex-col-reverse lg:flex-row items-center w-full">
+        <img
+          src="img/hero_image.webp"
+          alt="Hero image showing unity"
+          className="hero-bg lg:w-[50%] lg:h-screen object-cover"
+        />
 
-        <div className="flex flex-col items-center jusmt-4 justify-center md:text-left w-[86%]">
+        <div className="flex flex-col items-center jusmt-4 justify-center md:text-left w-[86%] lg:w-[50%]">
           <h2 className="text-5xl md:text-8xl font-extrabold leading-tight mb-6 text-center mt-4">
             Change We Deserve
           </h2>

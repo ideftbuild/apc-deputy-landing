@@ -14,10 +14,11 @@ export default function About() {
           About Me
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center place-items-center">
           <img
-            src="img/placeholder_bg.webp"
-            className="rounded-lg md:w-[80%]"
+            src="img/about_img.webp"
+            alt="About"
+            className="w-30 h-30 sm:w-32 sm:h-32 md:w-80 md:h-80 rounded-full object-cover mx-auto"
           />
           <div>
             <p className="text-gray-700 leading-relaxed">
