@@ -83,10 +83,10 @@ export default function CoreValues() {
         {values.map((value) => (
           <div
             key={value.title}
-            className="relative group w-[120px] h-[120px] md:w-[140px] md:h-[140px] md:p-8 p-4 rounded-full shadow-md hover:shadow-xl bg-white"
+            className="relative group w-[120px] h-[120px] md:w-fit md:h-fit md:p-8 p-4 rounded-full shadow-md hover:shadow-xl bg-white"
           >
             <div className="flex justify-center mt-2 md:mb-2">{value.icon}</div>
-            <h3 className="font-bold text-gray-800 text-center">
+            <h3 className="font-bold text-gray-800 text-center w-fit">
               {value.title}
             </h3>
             <span
