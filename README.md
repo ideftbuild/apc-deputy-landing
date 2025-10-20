@@ -1,4 +1,4 @@
-# APC Deputy Landing Page
+# APC National Deputy Secretary General Landing Page
 
 A modern, responsive political campaign landing page built with vanilla React, Tailwind CSS, and CDN-loaded dependencies. This single-page application showcases the candidacy of Ibrahim Komkanda Bangura for National Deputy Secretary General of the All People's Congress (APC) in Sierra Leone.
 
@@ -78,7 +78,7 @@ All configurable values are centralized in `src/constants.ts`:
 
 ```typescript
 window.APP_CONSTANTS = {
-  appName: "APC Deputy Landing",
+  appName: "APC National Deputy Secretary General Landing",
   candidateName: {
     short: "Ibrahim K. Bangura",
     full: "Ibrahim Komkanda Bangura",
@@ -117,10 +117,10 @@ window.APP_CONSTANTS = {
    ```bash
    # Using Python 3
    python -m http.server 8000
-   
+
    # Using Node.js (if you have http-server installed)
    npx http-server
-   
+
    # Using PHP
    php -S localhost:8000
    ```

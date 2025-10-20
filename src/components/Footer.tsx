@@ -17,7 +17,7 @@ export default function Footer() {
                 {APP_CONSTANTS.candidateName.full}
               </h3>
               <p className="text-gray-600 text-sm">
-                APC National Secretary • March 2026
+                APC National Deputy Secretary General • March 2026
               </p>
             </div>
 

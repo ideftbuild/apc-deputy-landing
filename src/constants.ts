@@ -6,7 +6,7 @@
  * donate link) for use across components.
  */
 export const APP_CONSTANTS = {
-  appName: "APC Deputy Landing",
+  appName: "APC National Deputy Secretary General Landing",
   recipientEmail: "contact@example.com",
   candidateName: {
     short: "Ibrahim K. Bangura",
