@@ -58,12 +58,12 @@ export default function VisionMission() {
               <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
                 <div>
                   <p className="md:text-xl text-gray-700 leading-relaxed">
-                    To create a Sierra Leone where every citizen, regardless of
-                    background, has equal access to justice, opportunities, and
-                    the resources needed to thrive. We envision a nation where
-                    youth leadership drives sustainable development and where
-                    integrity, innovation, and community empowerment are the
-                    cornerstones of progress.
+                    I aim to strengthen the administrative backbone of the APC
+                    Party through efficient coordination, inclusive
+                    participation, youth empowerment, and the digital
+                    transformation of party secretariat functions, ensuring the
+                    APC remains Sierra Leone’s leading political movement now
+                    and in the future
                   </p>
                 </div>
               </div>
@@ -73,52 +73,61 @@ export default function VisionMission() {
                 <ScrollReveal animationType="fadeLeft" animateOnce={false}>
                   <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
                     <img
-                      src="/img/equality_img.jpg"
-                      alt="Equality Image"
+                      src="/img/administration_img.webp"
+                      alt="Digital Governance"
                       className="w-full h-auto object-cover mb-4 rounded-md"
                     />
                     <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
                       <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
                     </div>
-                    <h4 className="font-bold text-gray-900 mb-2">Equality</h4>
+                    <h4 className="font-bold text-gray-900 mb-2">
+                      Digital Governance
+                    </h4>
                     <p className="text-gray-600 text-sm">
-                      Justice and opportunity for all citizens
+                      Building an efficient and disciplined party structure
+                      through clear communication and modern administrative
+                      systems.
                     </p>
                   </div>
                 </ScrollReveal>
+
                 <ScrollReveal animationType="scale" animateOnce={false}>
                   <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
                     <img
-                      src="/img/youth_leadership_img.jpg"
-                      alt="Youth Leadership Image"
+                      src="/img/inclusion_img.jpg"
+                      alt="Inclusive Participation"
                       className="w-full h-auto object-cover mb-4 rounded-md"
                     />
                     <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
                       <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
                     </div>
                     <h4 className="font-bold text-gray-900 mb-2">
-                      Youth Leadership
+                      Inclusive Participation
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Empowering the next generation
+                      Encouraging active engagement from all members —
+                      especially women and grassroots communities — to ensure
+                      everyone’s voice is heard.
                     </p>
                   </div>
                 </ScrollReveal>
+
                 <ScrollReveal animationType="fadeRight" animateOnce={false}>
                   <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
                     <img
-                      src="/img/sustainable_growth_img.jpg"
-                      alt="Sustainable Growth Image"
+                      src="/img/youth_empowerment_img.jpg"
+                      alt="Youth Empowerment"
                       className="w-full h-auto object-cover mb-4 rounded-md"
                     />
                     <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
                       <ChevronRight className="text-red-500 w-6 h-6 md:w-10 md:h-10" />
                     </div>
                     <h4 className="font-bold text-gray-900 mb-2">
-                      Sustainable Growth
+                      Youth Empowerment
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Building a prosperous future
+                      Investing in the next generation of party leaders through
+                      mentorship, training, and opportunity.
                     </p>
                   </div>
                 </ScrollReveal>
@@ -138,12 +147,9 @@ export default function VisionMission() {
               <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
                 <div>
                   <p className="md:text-xl text-gray-700 leading-relaxed">
-                    To serve the people of Sierra Leone through principled
-                    leadership, innovative policy-making, and unwavering
-                    commitment to community development. We strive to bridge the
-                    gap between aspiration and achievement by fostering
-                    inclusive governance, promoting education, and creating
-                    pathways for economic empowerment.
+                    I’m on a mission to build a more connected, modern, and
+                    people-driven APC that serves every member with integrity
+                    and purpose.
                   </p>
                 </div>
               </div>
@@ -157,15 +163,18 @@ export default function VisionMission() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 mb-1">
-                        Advocate for Justice
+                        Serve with Excellence
                       </h4>
                       <p className="text-gray-600 text-sm">
-                        Champion policies that ensure fair treatment and equal
-                        rights for all citizens
+                        To serve as a dependable, disciplined, and proactive
+                        deputy to the National Secretary General, ensuring that
+                        all secretarial duties are executed with excellence and
+                        timeliness.
                       </p>
                     </div>
                   </div>
                 </ScrollReveal>
+
                 <ScrollReveal animateOnce={false}>
                   <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
                     <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
@@ -173,15 +182,17 @@ export default function VisionMission() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 mb-1">
-                        Empower Communities
+                        Strengthen Communication
                       </h4>
                       <p className="text-gray-600 text-sm">
-                        Build strong, self-sufficient communities through
-                        education and economic opportunities
+                        To build stronger communication links between party
+                        leadership and the grassroots, especially among youth
+                        and women.
                       </p>
                     </div>
                   </div>
                 </ScrollReveal>
+
                 <ScrollReveal animateOnce={false}>
                   <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
                     <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
@@ -189,15 +200,17 @@ export default function VisionMission() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 mb-1">
-                        Drive Innovation
+                        Modernize Party Operations
                       </h4>
                       <p className="text-gray-600 text-sm">
-                        Implement forward-thinking solutions to address
-                        contemporary challenges
+                        To modernize the internal operations of the party
+                        through digital systems, record-keeping, and streamlined
+                        information management.
                       </p>
                     </div>
                   </div>
                 </ScrollReveal>
+
                 <ScrollReveal animateOnce={false}>
                   <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-red-50 transition-colors duration-300">
                     <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold">
@@ -205,11 +218,11 @@ export default function VisionMission() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 mb-1">
-                        Lead with Integrity
+                        Grow a People-Driven Party
                       </h4>
                       <p className="text-gray-600 text-sm">
-                        Demonstrate transparency, accountability, and ethical
-                        governance in all actions
+                        To help grow the APC as a people-driven party that
+                        listens, adapts, and leads with integrity.
                       </p>
                     </div>
                   </div>
@@ -222,13 +235,14 @@ export default function VisionMission() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-gray-600 mb-6">
-            Join us in building the change we deserve
+            Be part of the change. Together, we can build a stronger,
+            people-driven APC.
           </p>
           <a
             href="#"
-            className="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-500 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            className="bg-red-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
-            Get Involved
+            Join the Movement
           </a>
         </div>
       </div>

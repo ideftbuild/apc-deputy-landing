@@ -21,11 +21,17 @@ export default function About() {
           />
           <div>
             <p className="text-gray-700 leading-relaxed">
-              From my earliest days, I have been driven by a passion for justice
-              and a deep-seated belief in the power of community. My journey
-              into law and politics was fueled by a desire to serve the people
-              of Sierra Leone and to build a more equitable and prosperous
-              future for all, especially the youth.
+              I’m Ibrahim Komkanda Bangura, a Barrister and Solicitor of the
+              High Court of Sierra Leone, Lecturer at the University of Makeni,
+              and a passionate Youth Ambassador. Born in Mahera Town, Lungi, my
+              journey has always been driven by service, discipline, and a
+              desire to empower others. With First Class Honours in Political
+              Science and Law, I bring both academic excellence and practical
+              experience to everything I do. I currently lead the Makeni Branch
+              of Fornah-Sesay Cummings & Co, lecture at UniMak, and work closely
+              with young people to promote civic education and leadership. I
+              believe in integrity, innovation, and inclusiveness—values that
+              guide my work in law, education, and community development.
             </p>
             <div className="mx-auto text-center mt-6 mb-6">
               <a href="#" className="w-max border-b mt-4 hover:text-gray-800">
