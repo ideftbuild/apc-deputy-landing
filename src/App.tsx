@@ -42,10 +42,10 @@ export default function App() {
         <Donation />
 
         <div className="flex flex-col md:flex-row-reverse items-center justify-center relative z-10 overflow-hidden">
-          <ScrollReveal animationType="fadeLeft">
+          <ScrollReveal animationType="fadeRight">
             <ContactForm />
           </ScrollReveal>
-          <ScrollReveal animationType="fadeRight">
+          <ScrollReveal animationType="fadeLeft">
             <SocialMedia />
           </ScrollReveal>
         </div>
