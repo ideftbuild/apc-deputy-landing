@@ -18,22 +18,22 @@ export default function Navbar() {
     <nav className="max-w-7xl px-1">
       <div className="relative flex justify-between items-center h-16">
         {/* Right: Navigation Links (Desktop) */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 text-black">
           <a
             href="#about"
-            className="text-gray-700 hover:border-b hover:border-black font-medium"
+            className="hover:border-b hover:border-black font-medium"
           >
             About
           </a>
           <a
             href="#vision-mission"
-            className="text-gray-700 hover:border-b hover:border-black font-medium transition-colors"
+            className="hover:border-b hover:border-black font-medium transition-colors"
           >
             Vision & Mission
           </a>
           <a
             href="#contact"
-            className="text-gray-700 hover:border-b hover:border-black font-medium transition-colors"
+            className="hover:border-b hover:border-black font-medium transition-colors"
           >
             Contact
           </a>
