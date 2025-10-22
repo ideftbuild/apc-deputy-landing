@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Eye, Target, ChevronRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
-export default function VisionMission() {
+export default function Vision() {
   const [activeTab, setActiveTab] = useState("vision");
 
   return (
@@ -11,7 +11,7 @@ export default function VisionMission() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
-            Vision & Mission
+            Vision
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Guided by purpose, driven by impact

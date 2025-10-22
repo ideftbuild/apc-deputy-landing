@@ -11,7 +11,7 @@ export default function Donation() {
   return (
     <section
       id="donate"
-      className="py-16 md:py-20 flex flex-col items-center z-20 sticky h-screen"
+      className="py-16 md:py-20 flex flex-col items-center z-20 sticky h-screen bg-[#f5f5f5]"
     >
       {/*<HandHeart className="w-12 h-12 text-pink-500 mx-auto" />*/}
       <h2 className="text-3xl text-center md:text-start md:text-4xl font-bold text-gray-700 mt-4 mb-12 w-[90%] md:w-fit">

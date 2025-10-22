@@ -29,7 +29,13 @@ export default function Navbar() {
             href="#vision-mission"
             className="hover:border-b hover:border-black font-medium transition-colors"
           >
-            Vision & Mission
+            Vision
+          </a>
+          <a
+            href="#events"
+            className="hover:border-b hover:border-black font-medium transition-colors"
+          >
+            Events
           </a>
           <a
             href="#contact"
@@ -92,7 +98,14 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
             >
-              Vision & Mission
+              Vision
+            </a>
+            <a
+              href="#events"
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
+            >
+              Events
             </a>
             <a
               href="#contact"

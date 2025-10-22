@@ -3,7 +3,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import VisionMission from "./components/VisionMission";
+import Vision from "./components/Vision";
 import Donation from "./components/Donation";
 import "./App.css";
 import ContactForm from "./components/ContactForm";
@@ -11,6 +11,7 @@ import SocialMedia from "./components/SocialMedia";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
 import CoreValues from "./components/CoreValues";
+import Events from "./components/Events";
 
 /**
  * The main application component.
@@ -37,7 +38,8 @@ export default function App() {
 
           <About />
           <CoreValues />
-          <VisionMission />
+          <Vision />
+          <Events />
         </div>
         <Donation />
 
