@@ -88,7 +88,7 @@ export default function Events() {
           Events
         </h2>
 
-        <p className="text-gray-600 mb-10 max-w-2xl">
+        <p className="text-gray-600 mb-10 max-w-5xl">
           Discover the heart of our campaign through real moments with
           communities, where we empower youth and work to build a stronger,
           people-driven APC. Explore the stories that inspire change and join us
