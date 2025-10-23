@@ -1,5 +1,6 @@
 import { Calendar, MapPin, Clock, Play } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import { useState } from "react";
 
 type AnimationType =
   | "fadeUp"
@@ -24,6 +25,8 @@ interface Event {
  */
 export default function Events() {
   // Upcoming events - easily scalable
+  const [showThumbnail, setShowThumbnail] = useState(true);
+
   const upcomingEvents: Event[] = [
     {
       title: "Youth Empowerment Town Hall",
@@ -49,19 +52,24 @@ export default function Events() {
   const memories = [
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=400&h=300&fit=crop",
-      caption: "Community Outreach",
-    },
-    {
-      type: "video",
-      thumbnail:
-        "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=400&h=300&fit=crop",
-      caption: "Town Hall Meeting",
+      src: "/img/group_photo_1.webp",
+      caption: "Some text",
     },
     {
       type: "image",
-      src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=300&fit=crop",
-      caption: "Women's Summit",
+      src: "/img/group_photo_2.webp",
+      caption: "Some text",
+    },
+    {
+      type: "video",
+      thumbnail: "/img/video_1_thumbnail.webp",
+      src: "/videos/video_1.mp4",
+      caption: "Some text",
+    },
+    {
+      type: "image",
+      src: "/img/group_photo_3.webp",
+      caption: "Some text",
     },
   ];
 
@@ -134,16 +142,24 @@ export default function Events() {
                 key={idx}
                 className="flex-none w-64 snap-start group cursor-pointer"
               >
-                <div className="relative h-40 rounded-lg overflow-hidden bg-gray-200">
+                <div className="relative h-40 rounded-lg overflow-hidden bg-[#f5f5f5]">
+                  {item.type === "video" && !showThumbnail && (
+                    <video controls autoPlay controlsList="nodownload">
+                      <source src={item.src} type="video/mp4" />
+                    </video>
+                  )}
                   <img
                     src={item.type === "video" ? item.thumbnail : item.src}
                     alt={item.caption}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className={`
+                      ${item.type === "video" && !showThumbnail ? "hidden" : "w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"}
+                    `}
                   />
-                  {item.type === "video" && (
+                  {item.type === "video" && showThumbnail && (
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                       <div className="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center">
                         <Play
+                          onClick={() => setShowThumbnail(false)}
                           className="w-6 h-6 text-white ml-0.5"
                           fill="white"
                         />
