@@ -29,21 +29,31 @@ export default function Events() {
 
   const upcomingEvents: Event[] = [
     {
-      title: "Youth Empowerment Town Hall",
-      date: "November 15, 2025",
+      title: "21 days national campaign tour",
+      date: "November 2025",
       time: "3:00 PM",
       location: "Freetown Community Center",
       description:
-        "Join us for an interactive session on youth inclusion and opportunities within the APC.",
+        "Traveling across Sierra Leone to meet communities, share our vision, and rally support for a stronger, people-driven APC.",
       animationType: "fadeLeft",
     },
     {
-      title: "Regional Leadership Forum",
-      date: "November 28, 2025",
+      title:
+        "A visit to Nigeria to meet with Former President Ernest Bai Koroma",
+      date: "November 2025",
       time: "10:00 AM",
       location: "Bo District Hall",
       description:
-        "Engaging with regional coordinators to strengthen party unity and grassroots connections.",
+        "Engaging with respected leaders to exchange insights and strengthen international connections for the party.",
+      animationType: "scale",
+    },
+    {
+      title: "Follow up of the Lower level elections",
+      date: "November 2025",
+      time: "10:00 AM",
+      location: "Bo District Hall",
+      description:
+        "Continuing engagement with local party activities and supporters",
       animationType: "fadeRight",
     },
   ];
@@ -53,23 +63,25 @@ export default function Events() {
     {
       type: "image",
       src: "/img/group_photo_1.webp",
-      caption: "Some text",
+      caption: "Declaration at Masingbe Town in Tonkolili District",
     },
     {
       type: "image",
       src: "/img/group_photo_2.webp",
-      caption: "Some text",
+      caption:
+        "Campaign tour and engagement with delegates at Mange Bureh in Port Loko District",
     },
     {
       type: "video",
       thumbnail: "/img/video_1_thumbnail.webp",
       src: "/videos/video_1.mp4",
-      caption: "Some text",
+      caption:
+        "Engaging and sharing my aspiration with the youth of Lungi, Kaffu Bullom Chiefdom",
     },
     {
       type: "image",
       src: "/img/group_photo_3.webp",
-      caption: "Some text",
+      caption: "Meeting Constituency Executives at Mange Bureh",
     },
   ];
 
@@ -93,16 +105,14 @@ export default function Events() {
             Upcoming Events
           </h3>
 
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] [grid-auto-rows:1fr]">
             {upcomingEvents.map((event, idx) => (
               <ScrollReveal
                 animationType={event.animationType}
                 animateOnce={false}
+                key={idx}
               >
-                <div
-                  key={idx}
-                  className="bg-gradient-to-r from-red-100 to-red-50 p-6 md:p-8 rounded-r-xl shadow-sm hover:shadow-md transition-shadow"
-                >
+                <div className="bg-gradient-to-r from-red-200 to-red-100 p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
                   <h4 className="text-2xl font-bold text-gray-900 mb-3">
                     {event.title}
                   </h4>
@@ -120,7 +130,7 @@ export default function Events() {
                       <span>{event.location}</span>
                     </div>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed flex-1">
                     {event.description}
                   </p>
                 </div>

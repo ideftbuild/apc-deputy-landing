@@ -69,9 +69,9 @@ export default function Vision() {
               </div>
 
               {/* Vision Pillars */}
-              <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] [grid-auto-rows:1fr] mt-12">
                 <ScrollReveal animationType="fadeLeft" animateOnce={false}>
-                  <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
+                  <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300 h-full">
                     <img
                       src="/img/administration_img.webp"
                       alt="Digital Governance"
@@ -92,7 +92,7 @@ export default function Vision() {
                 </ScrollReveal>
 
                 <ScrollReveal animationType="scale" animateOnce={false}>
-                  <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
+                  <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300 h-full">
                     <img
                       src="/img/inclusion_img.jpg"
                       alt="Inclusive Participation"
@@ -113,7 +113,7 @@ export default function Vision() {
                 </ScrollReveal>
 
                 <ScrollReveal animationType="fadeRight" animateOnce={false}>
-                  <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300">
+                  <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300 h-full">
                     <img
                       src="/img/youth_empowerment_img.jpg"
                       alt="Youth Empowerment"
