@@ -105,9 +105,9 @@ export default function Vision() {
                       Inclusive Participation
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Encouraging active engagement from all members —
-                      especially women and grassroots communities — to ensure
-                      everyone’s voice is heard.
+                      Encouraging active engagement from all members, especially
+                      women and grassroots communities, to ensure everyone’s
+                      voice is heard.
                     </p>
                   </div>
                 </ScrollReveal>
