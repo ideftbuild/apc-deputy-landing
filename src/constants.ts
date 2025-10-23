@@ -7,18 +7,17 @@
  */
 export const APP_CONSTANTS = {
   appName: "APC National Deputy Secretary General Landing",
-  recipientEmail: "contact@example.com",
   candidateName: {
     short: "Ibrahim K. Bangura",
     full: "Ibrahim Komkanda Bangura",
   },
   socialLinks: {
-    facebook: "#facebook",
-    tiktok: "#tiktok",
-    twitter: "#twitter",
+    facebook: "https://web.facebook.com/profile.php?id=61581340741528",
+    tiktok: "https://www.tiktok.com/@komkonda",
+    twitter: "https://x.com/komkonda",
   },
   contact: {
-    email: "info@example.com",
+    email: "contact@example.com",
     phone: "[WhatsApp Link]",
   },
   donateLink: "#donate",

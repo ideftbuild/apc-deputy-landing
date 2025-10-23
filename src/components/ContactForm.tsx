@@ -8,14 +8,16 @@ import { APP_CONSTANTS } from "@/constants";
  */
 export default function ContactForm() {
   // The target email address for the mailto link.
-  const { recipientEmail } = APP_CONSTANTS;
+  const {
+    contact: { email },
+  } = APP_CONSTANTS;
   const subject = "Message from the Campaign Website";
 
   // The form's `action` attribute will construct the mailto link.
   // Note: The body content from the textarea won't be pre-filled automatically
   // in all email clients due to security reasons, but the `mailto` action will
   // open the user's default email client with the recipient and subject pre-filled.
-  const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}`;
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
 
   return (
     <section id="contact" className="py-16 md:py-24">

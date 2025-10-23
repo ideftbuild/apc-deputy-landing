@@ -1,4 +1,5 @@
 // src/components/About.tsx
+import { APP_CONSTANTS } from "@/constants";
 
 /**
  * About Component
@@ -6,6 +7,10 @@
  * education, legal expertise, leadership roles, and key achievements.
  */
 export default function About() {
+  const {
+    socialLinks: { facebook },
+  } = APP_CONSTANTS;
+
   return (
     <section id="about" className="py-12 md:py-24 px-6 md:px-20">
       <div className="container mx-auto">
@@ -34,7 +39,10 @@ export default function About() {
               guide my work in law, education, and community development.
             </p>
             <div className="mx-auto text-center mt-6 mb-6">
-              <a href="#" className="w-max border-b mt-4 hover:text-gray-800">
+              <a
+                href={facebook}
+                className="w-max border-b mt-4 hover:text-gray-800"
+              >
                 Learn more
               </a>
             </div>
