@@ -50,35 +50,7 @@ const values = [
 ];
 
 export default function CoreValues() {
-  const scrollRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
-  const [showLeftButton, setShowLeftButton] = useState(false);
-  const [showRightButton, setShowRightButton] = useState(false);
-
-  const checkScroll = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      setShowLeftButton(scrollLeft > 0);
-      setShowRightButton(scrollLeft < scrollWidth - clientWidth - 10);
-    }
-  };
-
-  useEffect(() => {
-    checkScroll();
-    window.addEventListener("resize", checkScroll);
-    return () => window.removeEventListener("resize", checkScroll);
-  }, []);
-
-  const scroll = (direction: string) => {
-    if (scrollRef.current) {
-      const scrollAmount = 250;
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-      setTimeout(checkScroll, 300);
-    }
-  };
 
   return (
     <section id="core-values" className="py-12 md:py-16">
@@ -91,36 +63,13 @@ export default function CoreValues() {
         </div>
 
         <div className="relative">
-          {showLeftButton && (
-            <button
-              onClick={() => scroll("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
-              aria-label="Scroll left"
-            >
-              <ChevronLeft className="w-6 h-6 text-gray-700" />
-            </button>
-          )}
-
-          {showRightButton && (
-            <button
-              onClick={() => scroll("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
-              aria-label="Scroll right"
-            >
-              <ChevronRight className="w-6 h-6 text-gray-700" />
-            </button>
-          )}
-
           <div
-            ref={scrollRef}
-            onScroll={checkScroll}
             onClick={() => setIsHovered(false)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             className={`pb-4 scrollbar-hide ${
               isHovered ? "md:overflow-visible" : "overflow-x-auto"
             }`}
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             <div className="flex gap-6 md:gap-8 min-w-min md:px-0 md:justify-center">
               {values.map((value) => {
@@ -128,7 +77,7 @@ export default function CoreValues() {
                 return (
                   <div
                     key={value.title}
-                    className="group relative flex-shrink-0 flex flex-col items-center w-28 md:w-32"
+                    className="group relative flex-shrink-0 flex flex-col items-center w-28 md:w-32 snap-start"
                   >
                     <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-white shadow-md group-hover:shadow-xl transition-all duration-300 flex items-center justify-center border-2 border-gray-200 group-hover:border-red-500">
                       <IconComponent
