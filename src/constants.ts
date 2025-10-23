@@ -18,7 +18,7 @@ export const APP_CONSTANTS = {
   },
   contact: {
     email: import.meta.env.VITE_CLIENT_EMAIL,
-    phone: "https://wa.me/+23278780100",
+    phone: "https://chat.whatsapp.com/KcPZyEDMeAU06qGMLF4GC7?mode=wwc",
   },
   donateLink: "#donate",
 };
