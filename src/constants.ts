@@ -17,8 +17,8 @@ export const APP_CONSTANTS = {
     twitter: "https://x.com/komkonda",
   },
   contact: {
-    email: "contact@example.com",
-    phone: "[WhatsApp Link]",
+    email: import.meta.env.VITE_CLIENT_EMAIL,
+    phone: "https://wa.me/+23278780100",
   },
   donateLink: "#donate",
 };

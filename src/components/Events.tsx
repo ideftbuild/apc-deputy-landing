@@ -157,9 +157,11 @@ export default function Events() {
                   />
                   {item.type === "video" && showThumbnail && (
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center">
+                      <div
+                        onClick={() => setShowThumbnail(false)}
+                        className="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center"
+                      >
                         <Play
-                          onClick={() => setShowThumbnail(false)}
                           className="w-6 h-6 text-white ml-0.5"
                           fill="white"
                         />
