@@ -43,7 +43,7 @@ export default function App() {
         </div>
         <Donation />
 
-        <div className="flex flex-col md:flex-row-reverse items-center justify-center relative z-10 overflow-hidden">
+        <div className="flex flex-col md:flex-row-reverse items-center justify-center relative z-10 overflow-hidden py-12 md:py-24 px-6 md:px-12">
           <ScrollReveal animationType="fadeRight">
             <ContactForm />
           </ScrollReveal>

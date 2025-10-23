@@ -32,9 +32,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gray-100/94"></div>
       <div className="relative z-50 flex flex-col lg:flex-row items-center lg:gap-6 justify-center w-full md:pt-24 md:px-24">
         <div className="flex flex-col m-auto justify-center md:text-left w-[86%] lg:w-[50%] text-black p-4">
-          <h2 className="text-5xl md:text-6xl lg:text-8xl font-extrabold leading-tight mb-2 mt-4">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-extrabold leading-tight mb-2 mt-4">
             Change We Deserve
-          </h2>
+          </h1>
 
           <p className="pl-2">A new generation driving unity and progress</p>
           <a

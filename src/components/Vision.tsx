@@ -6,10 +6,10 @@ export default function Vision() {
   const [activeTab, setActiveTab] = useState("vision");
 
   return (
-    <section id="vision-mission" className="py-12 md:py-24 px-6">
+    <section id="vision-mission" className="py-12 md:py-24 px-6 md:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
             Vision
           </h2>

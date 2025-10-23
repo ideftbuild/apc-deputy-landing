@@ -1,11 +1,9 @@
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 
 import {
   ShieldCheck,
   Users,
   TrendingUp,
-  ChevronLeft,
-  ChevronRight,
   HelpingHand,
   Search,
   Megaphone,
@@ -53,10 +51,10 @@ export default function CoreValues() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section id="core-values" className="py-12 md:py-16">
+    <section id="core-values" className="py-12 md:py-24">
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
             Guided By Our Values
           </h2>
           <p className="text-gray-600">What drives us forward</p>
