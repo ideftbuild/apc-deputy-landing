@@ -1,5 +1,6 @@
 // src/components/Hero.tsx
 import { useEffect, useState } from "react";
+
 /**
  * Hero Component
  * Features a prominent candidate image placeholder, a compelling introduction,
@@ -12,13 +13,11 @@ export default function Hero() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
-
       // Calculate opacity based on scroll position
       // Fades out completely by the time user scrolls one viewport height
       const opacity = Math.max(1 - scrollPosition / windowHeight, 0);
       setScrollOpacity(opacity);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -30,16 +29,18 @@ export default function Hero() {
       style={{ opacity: scrollOpacity }}
     >
       <div className="absolute inset-0 bg-gray-100/94"></div>
-      <div className="relative z-50 flex flex-col lg:flex-row items-center lg:gap-6 justify-center w-full md:pt-24 md:px-24">
-        <div className="flex flex-col m-auto justify-center md:text-left w-[86%] lg:w-[50%] text-black p-4">
-          <h1 className="text-5xl md:text-6xl lg:text-8xl font-extrabold leading-tight mb-2 mt-4">
+      <div className="relative z-50 flex flex-col lg:flex-row items-center lg:gap-6 justify-center w-full px-6 md:px-12 lg:px-24 pt-20 md:pt-24 lg:mt-[9%]">
+        {/* Text Content */}
+        <div className="flex flex-col justify-center text-center lg:text-left w-full lg:w-1/2 max-w-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight mb-3">
             Change We Deserve
           </h1>
-
-          <p className="pl-2">A new generation driving unity and progress</p>
+          <p className="text-base md:text-lg lg:text-xl mb-6 lg:pl-2">
+            A new generation driving unity and progress
+          </p>
           <a
             href="#about"
-            className="inline-flex items-center px-6 py-3 my-6 mb-8 bg-red-500 text-white font-semibold rounded-full shadow hover:bg-red-600 transition w-fit"
+            className="inline-flex items-center justify-center px-6 py-3 bg-red-500 text-white font-semibold rounded-full shadow hover:bg-red-600 transition w-fit mx-auto lg:mx-0"
           >
             Discover My Journey
             <svg
@@ -58,11 +59,13 @@ export default function Hero() {
             </svg>
           </a>
         </div>
-        <div className="relative w-full h-[35%] md:h-full md:w-[50%]">
+
+        {/* Image Container */}
+        <div className="relative w-full lg:w-1/2 h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[70vh] mt-6 lg:mt-0">
           <img
             src="img/client_image.webp"
             alt="Hero image showing unity"
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto max-w-full h-auto object-contain"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-auto h-full max-w-full object-contain"
           />
         </div>
       </div>
