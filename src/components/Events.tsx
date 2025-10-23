@@ -87,7 +87,7 @@ export default function Events() {
 
   return (
     <section id="events" className="px-6 py-12 md:py-24 md:px-20 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto mt-6">
         <h2 className="text-3xl mx-auto text-center md:text-start md:text-4xl font-bold text-gray-700 mb-8 w-[90%] md:w-fit">
           Events
         </h2>

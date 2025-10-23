@@ -1,12 +1,12 @@
 // src/components/Navbar.tsx
 import React from "react";
 import { APP_CONSTANTS } from "../constants";
+
 /**
  * Navbar Component
  * Displays the top navigation bar with the candidate name, primary links,
  * and a responsive mobile menu toggle.
  */
-
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -31,12 +31,14 @@ export default function Navbar() {
           >
             Vision
           </a>
+
           <a
             href="#events"
             className="hover:border-b hover:border-black font-medium transition-colors"
           >
             Events
           </a>
+
           <a
             href="#contact"
             className="hover:border-b hover:border-black font-medium transition-colors"
@@ -52,7 +54,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile: Donate Button + Menu Toggle */}
-        <div className="flex md:hidden items-center space-x-4">
+        <div className="flex md:hidden items-center space-x-4 ml-auto">
           <a
             href={APP_CONSTANTS.donateLink}
             className="bg-red-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-600 transition-colors"
@@ -61,7 +63,7 @@ export default function Navbar() {
           </a>
           <button
             onClick={toggleMenu}
-            className="text-gray-800 hover:text-red-500 focus:outline-none focus:text-red-500"
+            className="text-gray-800 hover:text-red-500 focus:outline-none focus:text-red-500 p-2"
             aria-label="Toggle menu"
           >
             <svg
@@ -83,34 +85,38 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute md:hidden shadow-sm bg-[#f5f5f5] border-t border-gray-400 z-100 left-[50%] w-[50%]">
-          <div className="px-4 pt-2 pb-4 space-y-2">
+        <div className="md:hidden absolute right-0 top-16 w-56 bg-white shadow-lg rounded-lg border border-gray-200 z-50 overflow-hidden">
+          <div className="py-2">
             <a
               href="#about"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
+              className="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium transition-colors border-l-4 border-transparent hover:border-red-600"
             >
               About
             </a>
+
             <a
               href="#vision-mission"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
+              className="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium transition-colors border-l-4 border-transparent hover:border-red-600"
             >
               Vision
             </a>
+
             <a
               href="#events"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700"
+              className="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium transition-colors border-l-4 border-transparent hover:border-red-600"
             >
               Events
             </a>
+
             <a
               href="#contact"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 hover:bg-pacity-10 py-2 rounded-md text-base font-medium text-gray-700"
+              className="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium transition-colors border-l-4 border-transparent hover:border-red-600"
             >
               Contact
             </a>

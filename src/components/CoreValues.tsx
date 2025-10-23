@@ -52,7 +52,7 @@ export default function CoreValues() {
 
   return (
     <section id="core-values" className="py-12 md:py-24">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 mt-6">
         <div className="mb-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
             Guided By Our Values
