@@ -13,7 +13,6 @@ type AnimationType =
 interface Event {
   title: string;
   date: string;
-  time: string;
   location: string;
   description: string;
   animationType: AnimationType;
@@ -31,8 +30,7 @@ export default function Events() {
     {
       title: "21 days national campaign tour",
       date: "November 2025",
-      time: "3:00 PM",
-      location: "Freetown Community Center",
+      location: "Sierra Leone",
       description:
         "Traveling across Sierra Leone to meet communities, share our vision, and rally support for a stronger, people-driven APC.",
       animationType: "fadeLeft",
@@ -41,8 +39,7 @@ export default function Events() {
       title:
         "A visit to Nigeria to meet with Former President Ernest Bai Koroma",
       date: "November 2025",
-      time: "10:00 AM",
-      location: "Bo District Hall",
+      location: "Nigeria",
       description:
         "Engaging with respected leaders to exchange insights and strengthen international connections for the party.",
       animationType: "scale",
@@ -50,8 +47,7 @@ export default function Events() {
     {
       title: "Follow up of the Lower level elections",
       date: "November 2025",
-      time: "10:00 AM",
-      location: "Bo District Hall",
+      location: "Sierra Leone",
       description:
         "Continuing engagement with local party activities and supporters",
       animationType: "fadeRight",
@@ -121,10 +117,10 @@ export default function Events() {
                       <Calendar className="w-4 h-4 text-red-600" />
                       <span className="font-medium">{event.date}</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    {/*<div className="flex items-center gap-2">
                       <Clock className="w-4 h-4 text-red-600" />
                       <span>{event.time}</span>
-                    </div>
+                    </div>*/}
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-red-600" />
                       <span>{event.location}</span>
