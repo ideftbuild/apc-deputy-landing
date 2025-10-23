@@ -14,7 +14,7 @@ export default function Donation() {
       className="py-16 md:py-20 flex flex-col items-center z-20 sticky h-screen bg-[#f5f5f5]"
     >
       {/*<HandHeart className="w-12 h-12 text-pink-500 mx-auto" />*/}
-      <h2 className="text-3xl text-center md:text-start md:text-4xl font-bold text-gray-700 mt-4 mb-12 w-[90%] md:w-fit">
+      <h2 className="text-3xl text-center md:text-start md:text-4xl font-bold text-gray-700 mt-4 mb-12">
         Support the Movement
       </h2>
       <div className="flex flex-col md:flex-row items-center">
