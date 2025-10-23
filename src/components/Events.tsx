@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Clock, Play } from "lucide-react";
+import { Calendar, MapPin, Play } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import { useState } from "react";
 
