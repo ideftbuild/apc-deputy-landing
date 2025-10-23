@@ -13,7 +13,7 @@ export const APP_CONSTANTS = {
   },
   socialLinks: {
     facebook: "https://web.facebook.com/profile.php?id=61581340741528",
-    tiktok: "https://www.tiktok.com/@komkonda",
+    tiktok: "https://www.tiktok.com/@komkanda1",
     twitter: "https://x.com/komkonda",
   },
   contact: {
