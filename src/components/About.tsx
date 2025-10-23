@@ -14,7 +14,7 @@ export default function About() {
   return (
     <section id="about" className="py-12 md:py-24 px-6 md:px-20">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
           About Me
         </h2>
 
