@@ -1,6 +1,11 @@
 import { Calendar, MapPin, Play } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 
 type AnimationType =
   | "fadeUp"
@@ -23,8 +28,13 @@ interface Event {
  * Showcases upcoming campaign events and memories from past events
  */
 export default function Events() {
-  // Upcoming events - easily scalable
-  const [showThumbnail, setShowThumbnail] = useState(true);
+  // Track playing state for each video individually
+  const [playingVideos, setPlayingVideos] = useState<{
+    [key: number]: boolean;
+  }>({});
+
+  // Reference to Swiper instance
+  const swiperRef = useRef<SwiperType | null>(null);
 
   const upcomingEvents: Event[] = [
     {
@@ -55,7 +65,12 @@ export default function Events() {
   ];
 
   // Past event memories
-  const memories = [
+  const memories: Array<{
+    type: "image" | "video";
+    src: string;
+    thumbnail?: string;
+    caption: string;
+  }> = [
     {
       type: "image",
       src: "/img/group_photo_1.webp",
@@ -80,6 +95,30 @@ export default function Events() {
       caption: "Meeting Constituency Executives at Mange Bureh",
     },
   ];
+
+  // Handle video play - pause swiper autoplay
+  const handleVideoPlay = (index: number) => {
+    setPlayingVideos((prev) => ({ ...prev, [index]: true }));
+    if (swiperRef.current?.autoplay) {
+      swiperRef.current.autoplay.stop();
+    }
+  };
+
+  // Handle video end - resume swiper autoplay
+  const handleVideoEnd = (index: number) => {
+    setPlayingVideos((prev) => ({ ...prev, [index]: false }));
+    if (swiperRef.current?.autoplay) {
+      swiperRef.current.autoplay.start();
+    }
+  };
+
+  // Handle slide change - stop any playing videos and resume autoplay
+  const handleSlideChange = () => {
+    setPlayingVideos({});
+    if (swiperRef.current?.autoplay) {
+      swiperRef.current.autoplay.start();
+    }
+  };
 
   return (
     <section id="events" className="px-6 py-12 md:py-24 md:px-20 bg-white">
@@ -117,10 +156,6 @@ export default function Events() {
                       <Calendar className="w-4 h-4 text-red-600" />
                       <span className="font-medium">{event.date}</span>
                     </div>
-                    {/*<div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-red-600" />
-                      <span>{event.time}</span>
-                    </div>*/}
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-red-600" />
                       <span>{event.location}</span>
@@ -141,45 +176,69 @@ export default function Events() {
             <div className="w-1 h-6 bg-red-600"></div>
             Moments of Impact
           </h3>
-
-          <div className="flex gap-4 overflow-x-auto pb-4 snap-x">
-            {memories.map((item, idx) => (
-              <div
-                key={idx}
-                className="flex-none w-64 snap-start group cursor-pointer"
-              >
-                <div className="relative h-40 rounded-lg overflow-hidden bg-[#f5f5f5]">
-                  {item.type === "video" && !showThumbnail && (
-                    <video controls autoPlay controlsList="nodownload">
-                      <source src={item.src} type="video/mp4" />
-                    </video>
-                  )}
-                  <img
-                    src={item.type === "video" ? item.thumbnail : item.src}
-                    alt={item.caption}
-                    className={`
-                      ${item.type === "video" && !showThumbnail ? "hidden" : "w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"}
-                    `}
-                  />
-                  {item.type === "video" && showThumbnail && (
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                      <div
-                        onClick={() => setShowThumbnail(false)}
-                        className="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center"
+          <div className="w-full max-w-6xl mx-auto rounded-2xl overflow-hidden">
+            <Swiper
+              modules={[Autoplay, Pagination, Navigation]}
+              spaceBetween={0}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              pagination={{ clickable: true }}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSlideChange={handleSlideChange}
+              className="rounded-2xl"
+            >
+              {memories.map((memory, index) => (
+                <SwiperSlide key={index} className="group">
+                  <div className="relative w-full aspect-video bg-gray-900 rounded-2xl overflow-hidden">
+                    {memory.type === "video" && playingVideos[index] ? (
+                      <video
+                        controls
+                        controlsList="nodownload"
+                        className="w-full h-full object-cover"
+                        onEnded={() => handleVideoEnd(index)}
+                        onPause={() => handleVideoEnd(index)}
+                        autoPlay
                       >
-                        <Play
-                          className="w-6 h-6 text-white ml-0.5"
-                          fill="white"
+                        <source src={memory.src} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <>
+                        <img
+                          src={
+                            memory.type === "video"
+                              ? memory.thumbnail
+                              : memory.src
+                          }
+                          alt={memory.caption}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <p className="mt-2 text-sm font-medium text-gray-700">
-                  {item.caption}
-                </p>
-              </div>
-            ))}
+                        {memory.type === "video" && (
+                          <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                            <button
+                              onClick={() => handleVideoPlay(index)}
+                              className="w-16 h-16 bg-red-600/90 hover:bg-red-600 rounded-full flex items-center justify-center transition-all hover:scale-110"
+                              aria-label="Play video"
+                            >
+                              <Play
+                                className="w-8 h-8 text-white ml-1"
+                                fill="white"
+                              />
+                            </button>
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
+                  <p className="mt-4 text-sm font-medium text-gray-700 text-center px-4">
+                    {memory.caption}
+                  </p>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
