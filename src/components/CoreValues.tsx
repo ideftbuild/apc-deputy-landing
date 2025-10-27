@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import {
   ShieldCheck,
   Users,
@@ -48,8 +46,6 @@ const values = [
 ];
 
 export default function CoreValues() {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <section id="core-values" className="py-12 md:py-24">
       <div className="max-w-6xl mx-auto px-4 mt-6">
@@ -61,11 +57,7 @@ export default function CoreValues() {
         </div>
 
         <div className="relative">
-          <div
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            className="pb-4 scrollbar-hide overflow-auto md:overflow-visible "
-          >
+          <div className="pb-4 scrollbar-hide overflow-auto md:overflow-visible ">
             <div className="flex gap-6 md:gap-8 min-w-min md:px-0 md:justify-center">
               {values.map((value) => {
                 const IconComponent = value.icon;
