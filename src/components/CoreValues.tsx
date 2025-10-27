@@ -62,12 +62,9 @@ export default function CoreValues() {
 
         <div className="relative">
           <div
-            onClick={() => setIsHovered(false)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className={`pb-4 scrollbar-hide ${
-              isHovered ? "md:overflow-visible" : "overflow-x-auto"
-            }`}
+            className="pb-4 scrollbar-hide overflow-auto md:overflow-visible "
           >
             <div className="flex gap-6 md:gap-8 min-w-min md:px-0 md:justify-center">
               {values.map((value) => {
