@@ -47,7 +47,7 @@ input {
 }
 
 #hero {
-    background-image: url("/img/hero_background_image.jpeg");
+    background-image: url("/img/bg_image.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
