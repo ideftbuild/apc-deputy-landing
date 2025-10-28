@@ -1,6 +1,6 @@
 import { Calendar, MapPin, Play } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -190,6 +190,14 @@ export default function Events() {
               onSwiper={(swiper) => (swiperRef.current = swiper)}
               onSlideChange={handleSlideChange}
               className="rounded-2xl"
+              style={
+                {
+                  "--swiper-pagination-bottom": "0px",
+                  "--swiper-pagination-bullet-inactive-color": "#999",
+                  "--swiper-pagination-bullet-inactive-opacity": "0.5",
+                  "--swiper-pagination-color": "#ef4444", // red-600
+                } as React.CSSProperties
+              }
             >
               {memories.map((memory, index) => (
                 <SwiperSlide key={index} className="group pb-4">
