@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Eye, Target, ChevronRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import { APP_CONSTANTS } from "@/constants";
 
 export default function Vision() {
   const [activeTab, setActiveTab] = useState("vision");
@@ -239,7 +240,7 @@ export default function Vision() {
             people-driven APC.
           </p>
           <a
-            href="#"
+            href={APP_CONSTANTS.contact.phone}
             className="bg-red-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Join the Movement
