@@ -192,7 +192,7 @@ export default function Events() {
               className="rounded-2xl"
             >
               {memories.map((memory, index) => (
-                <SwiperSlide key={index} className="group">
+                <SwiperSlide key={index} className="group pb-4">
                   <div className="relative w-full aspect-video bg-gray-900 rounded-2xl overflow-hidden">
                     {memory.type === "video" && playingVideos[index] ? (
                       <video
@@ -233,7 +233,7 @@ export default function Events() {
                       </>
                     )}
                   </div>
-                  <p className="mt-4 text-sm font-medium text-gray-700 text-center px-4">
+                  <p className="mt-4 mb-8 text-sm font-medium text-gray-700 text-center px-4">
                     {memory.caption}
                   </p>
                 </SwiperSlide>
