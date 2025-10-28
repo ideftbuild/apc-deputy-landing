@@ -30,7 +30,7 @@ export default function Hero() {
     >
       <div className="relative z-50 w-full h-full">
         {/* Text Content - Centered */}
-        <div className="absolute inset-0 flex items-start md:items-center justify-center px-6 md:px-12 lg:px-24 pt-36 md:pt-24 ">
+        <div className="absolute inset-0 flex items-start md:items-center justify-center px-6 md:px-12 lg:px-24 pt-38 md:p-12">
           <div className="flex flex-col text-center lg:text-left w-full lg:w-1/2 max-w-2xl lg:mr-auto">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight mb-3">
               Change We Deserve
