@@ -57,18 +57,18 @@ export default function CoreValues() {
         </div>
 
         <div className="relative">
-          <div className="pb-4 scrollbar-hide overflow-auto md:overflow-visible ">
+          <div className="pb-4 scrollbar-hide overflow-x-auto overflow-y-hidden md:overflow-visible snap-x snap-mandatory">
             <div className="flex gap-6 md:gap-8 min-w-min md:px-0 md:justify-center">
               {values.map((value) => {
                 const IconComponent = value.icon;
                 return (
                   <div
                     key={value.title}
-                    className="group relative flex-shrink-0 flex flex-col items-center w-28 md:w-32 snap-start"
+                    className="group relative flex-shrink-0 flex flex-col items-center w-28 md:w-32 snap-center"
                   >
-                    <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-white shadow-md group-hover:shadow-xl transition-all duration-300 flex items-center justify-center border-2 border-gray-200 group-hover:border-red-500">
+                    <div className="w-20 h-20 md:w-32 md:h-32 rounded-full bg-white shadow-md group-hover:shadow-xl transition-all duration-300 flex items-center justify-center border-2 border-gray-200 group-hover:border-red-500">
                       <IconComponent
-                        className="w-10 h-10 md:w-12 md:h-12 text-red-500"
+                        className="w-8 h-8 md:w-12 md:h-12 text-red-500"
                         strokeWidth={1.5}
                       />
                     </div>
