@@ -2,7 +2,7 @@ import { Calendar, MapPin, Play } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -23,17 +23,15 @@ interface Event {
   animationType: AnimationType;
 }
 
-/**
- * Events Section Component
- * Showcases upcoming campaign events and memories from past events
- */
-export default function Events() {
-  // Track playing state for each video individually
-  const [playingVideos, setPlayingVideos] = useState<{
-    [key: number]: boolean;
-  }>({});
+interface Memory {
+  type: "image" | "video";
+  src: string;
+  thumbnail?: string;
+  caption: string;
+}
 
-  // Reference to Swiper instance
+export default function Events() {
+  const [activeVideo, setActiveVideo] = useState<number | null>(null);
   const swiperRef = useRef<SwiperType | null>(null);
 
   const upcomingEvents: Event[] = [
@@ -64,13 +62,7 @@ export default function Events() {
     },
   ];
 
-  // Past event memories
-  const memories: Array<{
-    type: "image" | "video";
-    src: string;
-    thumbnail?: string;
-    caption: string;
-  }> = [
+  const memories: Memory[] = [
     {
       type: "image",
       src: "/img/group_photo_1.webp",
@@ -96,28 +88,9 @@ export default function Events() {
     },
   ];
 
-  // Handle video play - pause swiper autoplay
-  const handleVideoPlay = (index: number) => {
-    setPlayingVideos((prev) => ({ ...prev, [index]: true }));
-    if (swiperRef.current?.autoplay) {
-      swiperRef.current.autoplay.stop();
-    }
-  };
-
-  // Handle video end - resume swiper autoplay
-  const handleVideoEnd = (index: number) => {
-    setPlayingVideos((prev) => ({ ...prev, [index]: false }));
-    if (swiperRef.current?.autoplay) {
-      swiperRef.current.autoplay.start();
-    }
-  };
-
-  // Handle slide change - stop any playing videos and resume autoplay
-  const handleSlideChange = () => {
-    setPlayingVideos({});
-    if (swiperRef.current?.autoplay) {
-      swiperRef.current.autoplay.start();
-    }
+  const toggleAutoplay = (play: boolean) => {
+    if (play) swiperRef.current?.autoplay?.start();
+    else swiperRef.current?.autoplay?.stop();
   };
 
   return (
@@ -133,14 +106,15 @@ export default function Events() {
           people-driven APC. Explore the stories that inspire change and join us
           in shaping the future.
         </p>
-        {/* Upcoming Events - Prominent */}
+
+        {/* Upcoming Events */}
         <div className="mb-16">
           <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
             <div className="w-1 h-6 bg-red-600"></div>
             Upcoming Events
           </h3>
 
-          <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] [grid-auto-rows:1fr]">
+          <div className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))]">
             {upcomingEvents.map((event, idx) => (
               <ScrollReveal
                 animationType={event.animationType}
@@ -170,7 +144,7 @@ export default function Events() {
           </div>
         </div>
 
-        {/* Past Event Memories - Compact Scrollable */}
+        {/* Past Event Memories */}
         <div>
           <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
             <div className="w-1 h-6 bg-red-600"></div>
@@ -178,38 +152,36 @@ export default function Events() {
           </h3>
           <div className="w-full max-w-6xl mx-auto rounded-2xl overflow-hidden">
             <Swiper
-              modules={[Autoplay, Pagination, Navigation]}
+              modules={[Autoplay, Pagination]}
               spaceBetween={0}
               slidesPerView={1}
               loop={true}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-              }}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
               pagination={{ clickable: true }}
               onSwiper={(swiper) => (swiperRef.current = swiper)}
-              onSlideChange={handleSlideChange}
+              onSlideChange={() => setActiveVideo(null)}
               className="rounded-2xl"
               style={
                 {
                   "--swiper-pagination-bottom": "0px",
                   "--swiper-pagination-bullet-inactive-color": "#999",
                   "--swiper-pagination-bullet-inactive-opacity": "0.5",
-                  "--swiper-pagination-color": "#ef4444", // red-600
+                  "--swiper-pagination-color": "#ef4444",
                 } as React.CSSProperties
               }
             >
               {memories.map((memory, index) => (
                 <SwiperSlide key={index} className="group pb-4">
                   <div className="relative w-full aspect-video bg-gray-900 rounded-2xl overflow-hidden">
-                    {memory.type === "video" && playingVideos[index] ? (
+                    {memory.type === "video" && activeVideo === index ? (
                       <video
                         controls
                         controlsList="nodownload"
                         className="w-full h-full object-cover"
-                        onEnded={() => handleVideoEnd(index)}
-                        onPause={() => handleVideoEnd(index)}
                         autoPlay
+                        onPlay={() => toggleAutoplay(false)}
+                        onPause={() => toggleAutoplay(true)}
+                        onEnded={() => toggleAutoplay(true)}
                       >
                         <source src={memory.src} type="video/mp4" />
                       </video>
@@ -227,7 +199,10 @@ export default function Events() {
                         {memory.type === "video" && (
                           <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
                             <button
-                              onClick={() => handleVideoPlay(index)}
+                              onClick={() => {
+                                setActiveVideo(index);
+                                toggleAutoplay(false);
+                              }}
                               className="w-16 h-16 bg-red-600/90 hover:bg-red-600 rounded-full flex items-center justify-center transition-all hover:scale-110"
                               aria-label="Play video"
                             >
