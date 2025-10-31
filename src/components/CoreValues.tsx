@@ -15,7 +15,7 @@ const values = [
       " Unwavering commitment to the values, constitution, and leadership of the APC",
   },
   {
-    title: "Sevice",
+    title: "Service",
     icon: HelpingHand,
     description:
       "Leadership is service, and I’m committed to serving the party and the nation diligently",
