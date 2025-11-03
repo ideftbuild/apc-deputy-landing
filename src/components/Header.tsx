@@ -38,7 +38,7 @@ export default function Header() {
         <div className="flex justify-between px-4 lg:px-8 sm:px-6 text-black">
           <div className="flex items-center">
             <img
-              src="img/all_people_congress_logo.png"
+              src="img/client_logo.png"
               alt="Logo"
               className="w-8 h-8 mr-2"
             />
