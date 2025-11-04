@@ -30,7 +30,7 @@ export default function Donation() {
             build a stronger APC for a better Sierra Leone.
           </p>
           <a
-            href={APP_CONSTANTS.donateLink}
+            href={APP_CONSTANTS.contact.phone}
             className="inline-flex items-center gap-2 px-6 py-3 m-auto bg-red-500 text-white font-semibold rounded-full shadow-md hover:bg-red-600 focus:ring-2 focus:ring-red-400 focus:outline-none transition-all duration-200"
             aria-label="Contribute to the campaign"
           >
