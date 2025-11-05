@@ -57,6 +57,7 @@ input {
 @media (max-width: 640px) {
     #hero {
         background-image: url("/img/bg_image_sm.png");
+        background-position: center;
     }
 }
 
