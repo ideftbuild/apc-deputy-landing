@@ -54,6 +54,12 @@ input {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 640px) {
+    #hero {
+        background-image: url("/img/bg_image_sm.png");
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
