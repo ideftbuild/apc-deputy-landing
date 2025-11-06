@@ -1,5 +1,5 @@
 // src/components/ContactForm.tsx
-import { APP_CONSTANTS } from "@/constants";
+import { useState } from "react";
 
 /**
  * Contact Form Component
@@ -8,16 +8,49 @@ import { APP_CONSTANTS } from "@/constants";
  */
 export default function ContactForm() {
   // The target email address for the mailto link.
-  const {
-    contact: { email },
-  } = APP_CONSTANTS;
-  const subject = "Message from the Campaign Website";
+  const [status, setStatus] = useState("");
+  const [formData, setFormData] = useState({
+    recipientEmail: "",
+    name: "",
+    message: "",
+  });
 
-  // The form's `action` attribute will construct the mailto link.
-  // Note: The body content from the textarea won't be pre-filled automatically
-  // in all email clients due to security reasons, but the `mailto` action will
-  // open the user's default email client with the recipient and subject pre-filled.
-  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // prevent default form reload
+    setStatus("loading");
+
+    try {
+      console.log("Form submitted:", formData);
+      const response = await fetch(
+        "https://apc-deputy-api.onrender.com/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        },
+      );
+
+      if (!response.ok) throw new Error("Network response was not ok");
+
+      const result = await response.json();
+      console.log("Success:", result);
+      setStatus("success");
+    } catch (error) {
+      console.error("Error:", error);
+      setStatus("error");
+    } finally {
+      setTimeout(() => setStatus("idle"), 1000);
+    }
+  };
 
   return (
     <section id="contact" className="py-12 md:py-24">
@@ -30,10 +63,10 @@ export default function ContactForm() {
           from you.
         </p>
         <form
-          action={mailtoLink}
           method="post"
           encType="text/plain"
           className="rounded-lg space-y-6"
+          onSubmit={handleSubmit}
         >
           <div>
             <label
@@ -47,6 +80,8 @@ export default function ContactForm() {
               id="name"
               name="name"
               className="w-full px-4 py-3 focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your Name"
               required
               aria-label="Full Name"
@@ -55,16 +90,18 @@ export default function ContactForm() {
 
           <div>
             <label
-              htmlFor="email"
+              htmlFor="recipientEmail"
               className="block text-gray-800 font-semibold mb-2"
             >
               Email Address
             </label>
             <input
               type="email"
-              id="email"
-              name="email"
+              id="recipientEmail"
+              name="recipientEmail"
               className="w-full px-4 py-3 focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              value={formData.recipientEmail}
+              onChange={handleChange}
               placeholder="your.email@example.com"
               required
               aria-label="Email Address"
@@ -83,6 +120,8 @@ export default function ContactForm() {
               name="message"
               rows={6}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Your message, feedback, or question..."
               required
               aria-label="Message"
@@ -92,10 +131,18 @@ export default function ContactForm() {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-red-500 text-white font-bold py-3 px-10 rounded-full hover:bg-red-600 transition-colors duration-300 shadow-md text-lg"
-              aria-label="Send Message"
+              disabled={status === "loading"}
+              className={`${
+                status === "error"
+              } text-white bg-red-500 hover:bg-red-600 font-bold py-3 px-10 rounded-full transition-colors duration-300 shadow-md text-lg`}
             >
-              Send Message
+              {status === "loading"
+                ? "Sending..."
+                : status === "success"
+                  ? "Message Sent!"
+                  : status === "error"
+                    ? "Try Again"
+                    : "Send Message"}
             </button>
           </div>
         </form>
