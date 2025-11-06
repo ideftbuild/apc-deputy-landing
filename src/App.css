@@ -47,7 +47,6 @@ input {
 }
 
 #hero {
-    /*background-image: url("/img/bg_image.jpeg");*/
     background-image: url("/img/image.jpeg");
     background-size: cover;
     background-position: center;
