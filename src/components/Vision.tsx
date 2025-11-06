@@ -95,7 +95,7 @@ export default function Vision() {
                 <ScrollReveal animationType="scale" animateOnce={false}>
                   <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300 h-full">
                     <img
-                      src="/img/inclusion_img.jpg"
+                      src="/img/inclusion_img.webp"
                       alt="Inclusive Participation"
                       className="w-full h-auto object-cover mb-4 rounded-md"
                     />
@@ -116,7 +116,7 @@ export default function Vision() {
                 <ScrollReveal animationType="fadeRight" animateOnce={false}>
                   <div className="bg-gray-50 rounded-2xl p-6 hover:bg-red-50 transition-colors duration-300 h-full">
                     <img
-                      src="/img/youth_empowerment_img.jpg"
+                      src="/img/youth_empowerment_img.webp"
                       alt="Youth Empowerment"
                       className="w-full h-auto object-cover mb-4 rounded-md"
                     />
