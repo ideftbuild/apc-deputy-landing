@@ -48,16 +48,16 @@ input {
 
 #hero {
     /*background-image: url("/img/bg_image.jpeg");*/
-    background-image: url("/img/bg_image.webp");
+    background-image: url("/img/image.jpeg");
     background-size: cover;
-    background-position: bottom center;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 768px) {
     #hero {
-        background-image: url("/img/bg_image_sm.webp");
-        background-position: center;
+        background-image: url("/img/test_bg.jpeg");
+        background-position: bottom center;
     }
 }
 
