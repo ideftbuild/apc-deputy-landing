@@ -25,14 +25,12 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex justify-center text-black top-0 sticky z-10 h-screen overflow-hidden"
+      className="flex text-black top-0 sticky z-10 h-screen overflow-hidden flex-col justify-end"
       style={{ opacity: scrollOpacity }}
     >
-      <div className="relative z-50 w-full h-full">
-        {/* Text Content - Centered */}
-
-        <div className="absolute text-center xl:text-left w-full xl:w-1/2 max-w-2xl top-[20%] left-1/2 translate-x-[-50%] xl:top-1/2 xl:left-[25%] pl-4">
-          <h1 className="text-5xl md:text-6xl lg:text-8xl font-extrabold leading-tight mb-3">
+      <div className="flex flex-col justify-end xl:flex-row relative z-50 w-full h-[80%]">
+        <div className="flex flex-col justify-center xl:justify-end xl:px-12 pb-2 xl:pb-22 text-center xl:text-left h-1/2 xl:w-full xl:h-full">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight mb-3">
             Change We Deserve
           </h1>
           <p className="text-base md:text-lg lg:text-xl lg:pl-2 mb-4 md:mb-2">
@@ -65,11 +63,11 @@ export default function Hero() {
           className="hidden md:block absolute inset-0 top-3/4 left-1/2 xl:top-2/3 xl:left-1 xl:translate-x-0 translate-x-[-50%] h-[50%] md:translate-y-[-50%]"
         />
         {/* Image Container - Always at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 flex justify-center lg:justify-end lg:right-0 xl:left-auto mx-auto xl:mx-0 lg:w-3/4 xl:w-5/6 px-6 md:px-12 lg:px-24">
+        <div className="flex flex-col justify-end h-1/2 xl:w-full xl:h-full px-6 md:px-0">
           <img
             src="img/client_image.webp"
             alt="Hero image showing unity"
-            className="w-auto h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[70vh] max-w-full object-contain object-bottom"
+            className="w-auto h-full max-w-full object-contain object-bottom"
           />
         </div>
       </div>

@@ -49,14 +49,14 @@ input {
 #hero {
     background-image: url("/img/image.jpeg");
     background-size: cover;
-    background-position: center;
+    background-position: top right;
     background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
     #hero {
-        background-image: url("/img/test_bg.jpeg");
-        background-position: bottom center;
+        background-image: url("/img/bg_image_lg.webp");
+        background-position: contain;
     }
 }
 
