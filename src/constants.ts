@@ -20,5 +20,6 @@ export const APP_CONSTANTS = {
     email: import.meta.env.VITE_CLIENT_EMAIL,
     phone: "https://chat.whatsapp.com/KcPZyEDMeAU06qGMLF4GC7?mode=wwc",
   },
+  server_base_url: import.meta.env.VITE_SERVER_BASE_URL,
   donateLink: "#donate",
 };

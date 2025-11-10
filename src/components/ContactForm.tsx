@@ -1,6 +1,8 @@
 // src/components/ContactForm.tsx
+import { APP_CONSTANTS } from "@/constants";
 import { useState } from "react";
 
+const serverBaseURL = APP_CONSTANTS.server_base_url;
 /**
  * Contact Form Component
  * A simple, user-friendly form for visitors to send inquiries.
@@ -29,17 +31,13 @@ export default function ContactForm() {
     setStatus("loading");
 
     try {
-      console.log("Form submitted:", formData);
-      const response = await fetch(
-        "https://apc-deputy-api.onrender.com/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
+      const response = await fetch(`${serverBaseURL}/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify(formData),
+      });
 
       if (!response.ok) throw new Error("Network response was not ok");
 
