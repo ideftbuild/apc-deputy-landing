@@ -29,7 +29,7 @@ export default function Hero() {
       style={{ opacity: scrollOpacity }}
     >
       <div className="flex flex-col justify-end xl:flex-row relative z-50 w-full h-[80%]">
-        <div className="flex flex-col justify-center xl:justify-end xl:px-12 pb-2 xl:pb-22 text-center xl:text-left h-1/2 xl:w-full xl:h-full">
+        <div className="flex flex-col justify-center xl:justify-end xl:px-18 pb-2 xl:pb-22 text-center xl:text-left h-1/2 xl:w-full xl:h-full">
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight mb-3">
             Change We Deserve
           </h1>
