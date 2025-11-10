@@ -14,14 +14,14 @@ export default function Donation() {
       className="py-16 md:py-24 px-6 md:px-20 flex flex-col items-center z-20 sticky h-screen bg-[#f5f5f5]"
     >
       {/*<HandHeart className="w-12 h-12 text-pink-500 mx-auto" />*/}
-      <h2 className="text-3xl text-center md:text-start md:text-4xl font-bold text-gray-700 mt-4 mb-8">
+      <h2 className="text-3xl text-center md:text-start md:text-4xl font-bold text-gray-700 mt-4 mb-18">
         Support the Movement
       </h2>
-      <div className="flex flex-col md:flex-row items-center">
+      <div className="flex flex-col xl:flex-row items-center">
         <img
           src="/img/donate.webp"
           alt="Donate"
-          className="w-full md:w-1/2 h-auto"
+          className="w-full xl:w-1/2 h-auto"
         />
         <div className="p-2 text-gray-700 text-center md:text-start">
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
