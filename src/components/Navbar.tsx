@@ -47,9 +47,9 @@ export default function Navbar() {
           </a>
           <a
             href={APP_CONSTANTS.donateLink}
-            className="bg-red-500 text-white px-6 py-2 rounded-md font-medium hover:bg-red-600 transition-colors"
+            className="bg-red-500 text-white px-6 py-2 rounded-full font-medium hover:bg-red-600 transition-colors"
           >
-            Donate
+            Donate Now
           </a>
         </div>
 
@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className="flex md:hidden items-center space-x-4 ml-auto">
           <a
             href={APP_CONSTANTS.donateLink}
-            className="bg-red-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-600 transition-colors"
+            className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-red-600 transition-colors"
           >
             Donate
           </a>
