@@ -8,15 +8,15 @@ import { APP_CONSTANTS } from "../constants";
  */
 export default function Footer() {
   return (
-    <footer className="bg-[#f5f5f5]">
-      <div className="container mx-auto px-6 py-12 md:px-20">
+    <footer className="bg-[#f5f5f5] relative z-10">
+      <div className="container mx-auto px-6 pt-12 pb-6 md:px-20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-gray-300">
             <div className="text-center md:text-left">
               <h3 className="text-2xl font-bold text-gray-900 mb-1">
                 {APP_CONSTANTS.candidateName.full}
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-700 text-sm">
                 APC National Deputy Secretary General • March 2026
               </p>
             </div>
@@ -31,10 +31,21 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="pt-6 text-center">
+          <div className="pt-6 text-center text-sm text-gray-500">
             <p className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()}{" "}
               {APP_CONSTANTS.candidateName.full}. All Rights Reserved.
+            </p>
+            <p className="mt-2">
+              Created by{" "}
+              <a
+                href="https://www.gabete.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900 font-medium"
+              >
+                gabete.com
+              </a>
             </p>
           </div>
         </div>
