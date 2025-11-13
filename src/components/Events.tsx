@@ -96,15 +96,13 @@ export default function Events() {
   return (
     <section id="events" className="px-6 py-12 md:py-24 md:px-20 bg-white">
       <div className="max-w-7xl mx-auto mt-6">
-        <h2 className="text-3xl mx-auto text-center md:text-start md:text-4xl font-bold text-gray-700 mb-8 w-[90%] md:w-fit">
+        <h2 className="text-3xl mx-auto text-center md:text-start md:text-4xl font-bold text-gray-800 mb-8 w-[90%] md:w-fit">
           Events
         </h2>
 
-        <p className="text-gray-600 mb-10 max-w-5xl">
-          Discover the heart of our campaign through real moments with
-          communities, where we empower youth and work to build a stronger,
-          people-driven APC. Explore the stories that inspire change and join us
-          in shaping the future.
+        <p className="text-gray-700 text-center max-w-xl md:text-lg mx-auto mb-12">
+          Together, we're building a stronger, more inclusive community. Explore
+          our events and see how you can get involved
         </p>
 
         {/* Upcoming Events */}
@@ -135,7 +133,7 @@ export default function Events() {
                       <span>{event.location}</span>
                     </div>
                   </div>
-                  <p className="text-gray-600 leading-relaxed flex-1">
+                  <p className="text-gray-600 leading-relaxed flex-1 text-sm md:text-base">
                     {event.description}
                   </p>
                 </div>

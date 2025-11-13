@@ -94,10 +94,10 @@ export default function SocialMedia() {
   return (
     <section id="social-media" className="py-12 md:py-24">
       <div>
-        <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+        <h3 className="text-2xl font-bold text-center text-gray-800 mb-8">
           Stay Connected
         </h3>
-        <p className="w-[80%] md:w-[60%] text-center mx-auto text-gray-800">
+        <p className="w-[80%] md:w-[60%] text-center mx-auto text-gray-700">
           Every voice counts. Follow us on social media to share, support, and
           spread the message
         </p>

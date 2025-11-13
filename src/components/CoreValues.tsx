@@ -47,13 +47,15 @@ const values = [
 
 export default function CoreValues() {
   return (
-    <section id="core-values" className="py-12 md:py-24">
+    <section id="core-values" className="pt-2 mb-2">
       <div className="max-w-6xl mx-auto px-4 mt-6">
         <div className="mb-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
-            Guided By Our Values
+            My Values
           </h2>
-          <p className="text-gray-600">What drives us forward</p>
+          <p className="text-gray-700">
+            Bridging people, purpose, and progress
+          </p>
         </div>
 
         <div className="relative">

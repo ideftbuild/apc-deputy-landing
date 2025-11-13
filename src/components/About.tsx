@@ -24,8 +24,8 @@ export default function About() {
             alt="About"
             className="w-30 h-30 sm:w-32 sm:h-32 md:w-80 md:h-80 rounded-full object-cover mx-auto"
           />
-          <div>
-            <p className="text-gray-700 leading-relaxed">
+          <div className="max-w-xl mx-auto mb-12">
+            <p className="text-left text-gray-700 max-w-prose md:text-lg mt-12">
               I’m Ibrahim Komkanda Bangura, a Barrister and Solicitor of the
               High Court of Sierra Leone, Lecturer at the University of Makeni,
               and a passionate Youth Ambassador. Born in Mahera Town, Lungi, my

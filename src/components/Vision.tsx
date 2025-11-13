@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Eye, Target, ChevronRight } from "lucide-react";
+import { Eye, Target, ChevronRight, ArrowDown } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import { ArrowRight } from "lucide-react";
 import { APP_CONSTANTS } from "@/constants";
 
 export default function Vision() {
@@ -14,7 +15,7 @@ export default function Vision() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
             Vision
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-700 max-w-2xl mx-auto">
             Guided by purpose, driven by impact
           </p>
         </div>
@@ -58,7 +59,7 @@ export default function Vision() {
             <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16">
               <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
                 <div>
-                  <p className="md:text-xl text-gray-700 leading-relaxed">
+                  <p className="md:text-lg text-gray-700 leading-relaxed">
                     I aim to strengthen the administrative backbone of the APC
                     Party through efficient coordination, inclusive
                     participation, youth empowerment, and the digital
@@ -147,7 +148,7 @@ export default function Vision() {
             <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16">
               <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
                 <div>
-                  <p className="md:text-xl text-gray-700 leading-relaxed">
+                  <p className="md:text-lg text-gray-700 leading-relaxed">
                     I’m on a mission to build a more connected, modern, and
                     people-driven APC that serves every member with integrity
                     and purpose.
@@ -234,11 +235,12 @@ export default function Vision() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6">
-            Be part of the change. Together, we can build a stronger,
-            people-driven APC.
+        <div className="flex flex-col md:flex-row justify-center items-center text-center mt-16 gap-4">
+          <p className="font-semibold text-sm tracking-wide w-fit text-gray-800">
+            ALM We Move
           </p>
+          <ArrowDown className="md:hidden sm:block w-4 h-4 text-red-500/60" />
+          <ArrowRight className="hidden md:block w-4 h-4 text-red-500/60" />
           <a
             href={APP_CONSTANTS.contact.phone}
             className="bg-red-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-600 transition-colors duration-300 shadow-lg hover:shadow-xl"
