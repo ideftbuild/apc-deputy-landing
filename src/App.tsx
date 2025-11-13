@@ -1,11 +1,11 @@
 // src/App.tsx
 // Access components from window object
+import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Vision from "./components/Vision";
 import Donation from "./components/Donation";
-import "./App.css";
 import ContactForm from "./components/ContactForm";
 import SocialMedia from "./components/SocialMedia";
 import Footer from "./components/Footer";
@@ -28,13 +28,13 @@ export default function App() {
         <Hero />
 
         <div className="relative z-20 bg-[#f5f5f5] overflow-hidden">
-          <div className="flex items-center justify-center gap-4 pt-8">
+          {/*<div className="flex items-center justify-center gap-4 pt-8">
             <div className="h-px bg-red-300 w-20"></div>
             <p className="text-sm font-semibold text-red-500 uppercase tracking-widest">
               ALM we move!
             </p>
             <div className="h-px bg-red-300 w-20"></div>
-          </div>
+          </div>*/}
 
           <About />
           <CoreValues />

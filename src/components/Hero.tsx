@@ -30,10 +30,14 @@ export default function Hero() {
     >
       <div className="flex flex-col justify-end xl:flex-row relative z-50 w-full h-[80%]">
         <div className="flex flex-col justify-center xl:justify-end xl:px-18 pb-2 xl:pb-22 text-center xl:text-left h-1/2 xl:w-full xl:h-full">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight mb-3">
+          <p className="font-semibold text-sm tracking-wide flex items-center gap-2 bg-red-400/20 w-fit p-3 rounded-full mx-auto xl:mx-0 border border-red-200 mb-18 md:mb-6 xl:mb-0">
+            <span className="w-4 h-4 bg-red-500/70 rounded-full border border-red-600"></span>
+            <span>ALM We Move</span>
+          </p>
+          <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold leading-tight mb-3">
             Change We Deserve
           </h1>
-          <p className="text-base md:text-lg lg:text-xl lg:pl-2 mb-4 md:mb-2">
+          <p className="text-base md:text-lg lg:text-xl lg:pl-2 mb-4">
             A new generation driving unity and progress
           </p>
           <a
@@ -60,7 +64,7 @@ export default function Hero() {
 
         <img
           src="/img/apc_bg_logo.png"
-          className="hidden md:block absolute inset-0 top-3/4 left-1/2 xl:top-2/3 xl:left-1 xl:translate-x-0 translate-x-[-50%] h-[50%] md:translate-y-[-50%]"
+          className="hidden md:block absolute inset-0 top-3/4 left-1/2 xl:top-2/3 xl:left-1 xl:translate-x-0 translate-x-[-50%] h-[50%] md:translate-y-[-50%] z-[-10]"
         />
         {/* Image Container - Always at bottom */}
         <div className="flex flex-col justify-end h-1/2 xl:w-full xl:h-full px-6 md:px-0">
