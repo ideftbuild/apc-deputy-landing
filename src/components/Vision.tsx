@@ -236,7 +236,7 @@ export default function Vision() {
 
         {/* Bottom CTA */}
         <div className="flex flex-col md:flex-row justify-center items-center text-center mt-16 gap-4">
-          <p className="font-semibold text-sm tracking-wide w-fit text-gray-800">
+          <p className="font-bold text-sm tracking-wide w-fit text-gray-800">
             ALM We Move
           </p>
           <ArrowDown className="md:hidden sm:block w-4 h-4 text-red-500/60" />
